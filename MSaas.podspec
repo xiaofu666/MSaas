@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "MSaas"
-  s.version      = "1.0.0" # 版本号
+  s.version      = "1.0.1" # 版本号
   s.summary      = "MSaas is a SDK from CloudDragonfly providing union AD service."
   s.description  = <<-DESC
                    ‘CloudDragonfly provides Union ADs which include native、banner、feed、splash、RewardVideo etc..’
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.author       = { "小富" => "3290235031@qq.com" }
 
   s.homepage     = "https://github.com/xiaofu666/MSaas_SDK"
-  s.source       = { :git => "https://github.com/xiaofu666/MSaas_SDK.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/xiaofu666/MSaas.git", :tag => s.version.to_s }
 
   s.platform     = :ios, "9.0"
   s.ios.deployment_target = '9.0'
@@ -22,6 +22,5 @@ Pod::Spec.new do |s|
   s.vendored_frameworks =  'MSaasSDK/Frameworks/*.framework'
   
   s.xcconfig = { "OTHER_LDFLAGS" => "-ObjC" }
-  s.pod_target_xcconfig = { 'VALID_ARCHS' => 'armv7 arm64' }
   
 end
