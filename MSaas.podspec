@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "小富" => "3290235031@qq.com" }
 
-  s.homepage     = "https://github.com/xiaofu666/MSaas_SDK"
+  s.homepage     = "https://github.com/xiaofu666/MSaas"
   s.source       = { :git => "https://github.com/xiaofu666/MSaas.git", :tag => s.version.to_s }
 
   s.platform     = :ios, "9.0"
