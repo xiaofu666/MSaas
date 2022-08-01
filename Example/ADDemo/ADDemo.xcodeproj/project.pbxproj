@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		E7109CE0276AE46600F4246F /* FullscreenVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7109CDF276AE46600F4246F /* FullscreenVideoViewController.m */; };
 		E764056D277C1209002BD834 /* PasterVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E764056C277C1208002BD834 /* PasterVideoViewController.m */; };
-		E764061D277C340D002BD834 /* MSaas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7640618277C340D002BD834 /* MSaas.framework */; };
 		E775CD45273A92EC00C23527 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E775CD44273A92EC00C23527 /* LaunchScreen.storyboard */; };
 		E7956E92273A8F3700502058 /* IDFAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7956E91273A8F3700502058 /* IDFAViewController.m */; };
 		E7C1E6B727635DE900142567 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7C1E6B627635DE800142567 /* MessageUI.framework */; };
@@ -54,6 +53,7 @@
 		E7D23B4B273A8D2E006DDF4A /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D23B4A273A8D2E006DDF4A /* AppTrackingTransparency.framework */; };
 		E7D23B4D273A8D33006DDF4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D23B4C273A8D33006DDF4A /* Foundation.framework */; };
 		E7D23B4F273A8D38006DDF4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D23B4E273A8D38006DDF4A /* UIKit.framework */; };
+		E7DE535127BD13420065C68F /* SFImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DE535027BD13420065C68F /* SFImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -74,7 +74,6 @@
 		E7109CDF276AE46600F4246F /* FullscreenVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullscreenVideoViewController.m; sourceTree = "<group>"; };
 		E764056B277C1208002BD834 /* PasterVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasterVideoViewController.h; sourceTree = "<group>"; };
 		E764056C277C1208002BD834 /* PasterVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasterVideoViewController.m; sourceTree = "<group>"; };
-		E7640618277C340D002BD834 /* MSaas.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MSaas.framework; sourceTree = "<group>"; };
 		E775CD44273A92EC00C23527 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7956E90273A8F3700502058 /* IDFAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDFAViewController.h; sourceTree = "<group>"; };
 		E7956E91273A8F3700502058 /* IDFAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDFAViewController.m; sourceTree = "<group>"; };
@@ -132,6 +131,8 @@
 		E7D23B4A273A8D2E006DDF4A /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
 		E7D23B4C273A8D33006DDF4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E7D23B4E273A8D38006DDF4A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E7DE534F27BD13420065C68F /* SFImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFImageView.h; sourceTree = "<group>"; };
+		E7DE535027BD13420065C68F /* SFImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFImageView.m; sourceTree = "<group>"; };
 		E7FD64DA2760C444008C2716 /* ADInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADInfo.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,7 +159,6 @@
 				E7D23B33273A8CCA006DDF4A /* CoreLocation.framework in Frameworks */,
 				E7D23B31273A8CC1006DDF4A /* AVFoundation.framework in Frameworks */,
 				E7D23B2F273A8CB9006DDF4A /* CoreMedia.framework in Frameworks */,
-				E764061D277C340D002BD834 /* MSaas.framework in Frameworks */,
 				E7D23B2D273A8CAF006DDF4A /* MediaPlayer.framework in Frameworks */,
 				E7D23B2B273A8CA8006DDF4A /* WebKit.framework in Frameworks */,
 				E7D23B29273A8CA2006DDF4A /* MobileCoreServices.framework in Frameworks */,
@@ -176,22 +176,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E764051D277C1151002BD834 /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-				E7640614277C340D002BD834 /* MSaas */,
-			);
-			path = Lib;
-			sourceTree = "<group>";
-		};
-		E7640614277C340D002BD834 /* MSaas */ = {
-			isa = PBXGroup;
-			children = (
-				E7640618277C340D002BD834 /* MSaas.framework */,
-			);
-			path = MSaas;
-			sourceTree = "<group>";
-		};
 		E7D23A95273A8AF1006DDF4A = {
 			isa = PBXGroup;
 			children = (
@@ -212,7 +196,6 @@
 		E7D23AA0273A8AF2006DDF4A /* ADDemo */ = {
 			isa = PBXGroup;
 			children = (
-				E764051D277C1151002BD834 /* Lib */,
 				E7D23AC0273A8B9F006DDF4A /* AppDelegate.h */,
 				E7D23AC5273A8B9F006DDF4A /* AppDelegate.m */,
 				E7D23AA7273A8AF2006DDF4A /* ViewController.h */,
@@ -231,6 +214,8 @@
 				E7109CDF276AE46600F4246F /* FullscreenVideoViewController.m */,
 				E764056B277C1208002BD834 /* PasterVideoViewController.h */,
 				E764056C277C1208002BD834 /* PasterVideoViewController.m */,
+				E7DE534F27BD13420065C68F /* SFImageView.h */,
+				E7DE535027BD13420065C68F /* SFImageView.m */,
 				E7D23ABE273A8B9F006DDF4A /* ADTableViewCell.h */,
 				E7D23ABD273A8B9F006DDF4A /* ADTableViewCell.m */,
 				E7D23AF9273A8BA0006DDF4A /* ADTableViewCell.xib */,
@@ -356,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7DE535127BD13420065C68F /* SFImageView.m in Sources */,
 				E7D23B02273A8BA0006DDF4A /* HalfLaunchScreenViewController.m in Sources */,
 				E7D23B11273A8BA8006DDF4A /* MotivationVideoViewController.m in Sources */,
 				E7D23B01273A8BA0006DDF4A /* ADTableViewCell.m in Sources */,
@@ -499,7 +485,31 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/ADDemo/Lib/ksAdapter",
+					"$(PROJECT_DIR)/ADDemo/Lib/ksAdapter/ksAD",
+					"$(PROJECT_DIR)/ADDemo/Lib/csjAdapter/csjAD",
+					"$(PROJECT_DIR)/ADDemo/Lib/csjAdapter",
+					"$(PROJECT_DIR)/ADDemo/Lib/jztAdapter",
+					"$(PROJECT_DIR)/ADDemo/Lib/jztAdapter/jztAD",
+					"$(PROJECT_DIR)/ADDemo/Lib/bdAdapter",
+					"$(PROJECT_DIR)/ADDemo/Lib/bdAdapter/bdAD",
+					"$(PROJECT_DIR)/ADDemo/Lib/gdtAdapter",
 					"$(PROJECT_DIR)/ADDemo/Lib/MSaas",
+					"$(PROJECT_DIR)/ADDemo/Lib/mtgAdapter",
+					"$(PROJECT_DIR)/ADDemo/Lib/mtgAdapter/mtgAD",
+					"$(PROJECT_DIR)/ADDemo/MSaas-SDK/ksAdapter-V3.3.26",
+					"$(PROJECT_DIR)/ADDemo/MSaas-SDK/bdAdapter-V4.881/bdAD",
+					"$(PROJECT_DIR)/ADDemo/MSaas-SDK/bdAdapter-V4.881",
+					"$(PROJECT_DIR)/ADDemo/MSaas-SDK/gdtAdapter-V4.13.72",
+					"$(PROJECT_DIR)/ADDemo/MSaas-SDK/csjAdapter-V4.6.0.4/csjAD",
+					"$(PROJECT_DIR)/ADDemo/MSaas-SDK/csjAdapter-V4.6.0.4",
+					"$(PROJECT_DIR)/ADDemo/MSaas-SDK/MSaas-V2.5.3",
+					"$(PROJECT_DIR)/ADDemo/MSaas-SDK/sigmobAdapter-V4.1.2/SigmobAD",
+					"$(PROJECT_DIR)/ADDemo/MSaas-SDK/sigmobAdapter-V4.1.2",
+					"$(PROJECT_DIR)/ADDemo/MSaas-SDK/mtgAdapter-V7.1.7",
+					"$(PROJECT_DIR)/ADDemo/MSaas-SDK/mtgAdapter-V7.1.7/mtgAD",
+					"$(PROJECT_DIR)/ADDemo/MSaas-SDK/jztAdapter-V1.4.0",
+					"$(PROJECT_DIR)/ADDemo/MSaas-SDK/jztAdapter-V1.4.0/jztAD",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ADDemo/Info.plist;
@@ -513,13 +523,17 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/ADDemo/Lib/gdtAdapter/gdtAD",
+					"$(PROJECT_DIR)/ADDemo/MSaas-SDK/gdtAdapter-V4.13.72/gdtAD",
+				);
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cctv4g.cctvmobiletv;
+				PRODUCT_BUNDLE_IDENTIFIER = com.medpro.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Debug;
 		};
@@ -534,7 +548,31 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/ADDemo/Lib/ksAdapter",
+					"$(PROJECT_DIR)/ADDemo/Lib/ksAdapter/ksAD",
+					"$(PROJECT_DIR)/ADDemo/Lib/csjAdapter/csjAD",
+					"$(PROJECT_DIR)/ADDemo/Lib/csjAdapter",
+					"$(PROJECT_DIR)/ADDemo/Lib/jztAdapter",
+					"$(PROJECT_DIR)/ADDemo/Lib/jztAdapter/jztAD",
+					"$(PROJECT_DIR)/ADDemo/Lib/bdAdapter",
+					"$(PROJECT_DIR)/ADDemo/Lib/bdAdapter/bdAD",
+					"$(PROJECT_DIR)/ADDemo/Lib/gdtAdapter",
 					"$(PROJECT_DIR)/ADDemo/Lib/MSaas",
+					"$(PROJECT_DIR)/ADDemo/Lib/mtgAdapter",
+					"$(PROJECT_DIR)/ADDemo/Lib/mtgAdapter/mtgAD",
+					"$(PROJECT_DIR)/ADDemo/MSaas-SDK/ksAdapter-V3.3.26",
+					"$(PROJECT_DIR)/ADDemo/MSaas-SDK/bdAdapter-V4.881/bdAD",
+					"$(PROJECT_DIR)/ADDemo/MSaas-SDK/bdAdapter-V4.881",
+					"$(PROJECT_DIR)/ADDemo/MSaas-SDK/gdtAdapter-V4.13.72",
+					"$(PROJECT_DIR)/ADDemo/MSaas-SDK/csjAdapter-V4.6.0.4/csjAD",
+					"$(PROJECT_DIR)/ADDemo/MSaas-SDK/csjAdapter-V4.6.0.4",
+					"$(PROJECT_DIR)/ADDemo/MSaas-SDK/MSaas-V2.5.3",
+					"$(PROJECT_DIR)/ADDemo/MSaas-SDK/sigmobAdapter-V4.1.2/SigmobAD",
+					"$(PROJECT_DIR)/ADDemo/MSaas-SDK/sigmobAdapter-V4.1.2",
+					"$(PROJECT_DIR)/ADDemo/MSaas-SDK/mtgAdapter-V7.1.7",
+					"$(PROJECT_DIR)/ADDemo/MSaas-SDK/mtgAdapter-V7.1.7/mtgAD",
+					"$(PROJECT_DIR)/ADDemo/MSaas-SDK/jztAdapter-V1.4.0",
+					"$(PROJECT_DIR)/ADDemo/MSaas-SDK/jztAdapter-V1.4.0/jztAD",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ADDemo/Info.plist;
@@ -548,13 +586,17 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/ADDemo/Lib/gdtAdapter/gdtAD",
+					"$(PROJECT_DIR)/ADDemo/MSaas-SDK/gdtAdapter-V4.13.72/gdtAD",
+				);
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cctv4g.cctvmobiletv;
+				PRODUCT_BUNDLE_IDENTIFIER = com.medpro.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Release;
 		};

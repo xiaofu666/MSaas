@@ -33,10 +33,10 @@
     // Do any additional setup after loading the view from its nib.
 //    [self launchScreenBtnClicked:nil];
 }
+
 - (void)halfLaunchScreenBtnClicked:(UIButton*)sender
 {
     SFSplashManager *manager = [SFSplashManager new];
-    [manager registerADVId:@"2" ClassName:@"CustomGdtSplashManager"];
     manager.delegate = self;
     manager.mediaId = splash_id;
     UILabel *bottom = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height * 0.2)];
@@ -51,8 +51,6 @@
     self.manager = manager;
     NSLog(@"开始请求开屏广告");
 }
-
-
 
 #pragma mark ADDelegate
 /**

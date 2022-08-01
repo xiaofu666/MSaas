@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "MSaas"
-  s.version      = "1.0.1" # 版本号
+  s.version      = "2.5.3" # 版本号
   s.summary      = "MSaas is a SDK from CloudDragonfly providing union AD service."
   s.description  = <<-DESC
                    ‘CloudDragonfly provides Union ADs which include native、banner、feed、splash、RewardVideo etc..’

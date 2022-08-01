@@ -2,8 +2,8 @@
 Pod::Spec.new do |s|
 
   s.name         = "SFAdJztAdapter"
-  s.version      = "1.0.2" # 版本号
-  s.summary      = "SFAdGdtAdapter is a AD SDK Adapter."
+  s.version      = "1.4.0" # 版本号
+  s.summary      = "SFAdJztAdapter is a AD SDK Adapter."
   s.description  = <<-DESC
                    ‘CloudDragonfly provides Union ADs which include native、banner、feed、splash、RewardVideo etc..’
                    DESC

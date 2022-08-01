@@ -33,8 +33,7 @@
     [self.view addSubview:launchScreenBtn];
 }
 
-- (void)launchScreenBtnClicked:(UIButton*)sender
-{
+- (void)launchScreenBtnClicked:(UIButton*)sender{
     _manager = [SFSplashManager new];
     _manager.delegate = self;
     _manager.mediaId = splash_id;

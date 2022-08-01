@@ -40,7 +40,6 @@
 - (void)loadRewardedVideo
 {
     self.motivationVideo = [SFRewardVideoManager new];
-    [self.motivationVideo registerADVId:@"2" ClassName:@"CustomGdtVideoManager"];
     self.motivationVideo.mediaId = reward_video_id;
     self.motivationVideo.delegate = self;
     [self.motivationVideo loadAdDataWithExtra:nil];

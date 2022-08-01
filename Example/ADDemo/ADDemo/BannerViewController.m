@@ -44,7 +44,6 @@
     self.bannerView = [[UIView alloc]initWithFrame:CGRectMake(0,SF_ScreenH-height , width, height)];
     
     self.banner =  [SFBannerManager new];
-    [self.banner registerADVId:@"2" ClassName:@"CustomGdtBannerManager"];
     self.banner.size = self.bannerView.bounds.size;
     self.banner.delegate = self;
     self.banner.mediaId = banner_id;

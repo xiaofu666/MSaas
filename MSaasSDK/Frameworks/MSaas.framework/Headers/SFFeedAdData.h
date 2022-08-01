@@ -9,45 +9,68 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#define MSaasGdtMuteEnable @"MSaasGdtMuteEnable"
+#define MSaasGdtMuteEnableSwitchKey @"MSaasGdtMuteEnableSwitchKey"
+
 @interface SFFeedAdData : NSObject
 
 /**
  * 大图Url，可能为空，建议使用 - (void)registerAdViewForInteraction:(UIImageView *)view adData:(SFFeedAdData*)adData clickableViews:(NSArray *)views; 方法替代
  */
-@property (nonatomic,copy) NSString *imageUrl;
+@property (nonatomic, copy, nullable) NSString *imageUrl;
+
+/**
+ * 大图广告的宽
+ */
+@property (nonatomic) double imageWidth;
+
+/**
+ * 大图广告的高
+ */
+@property (nonatomic) double imageHeight;
+
+/**
+ * >1：横图 <1：竖图
+ */
+@property (nonatomic) double imageRatio;
 
 /**
  * 图标Url
  */
-@property (nonatomic,copy) NSString *iconUrl;
+@property (nonatomic, copy, nullable) NSString *iconUrl;
 
 /**
  * 标题
  */
-@property (nonatomic,copy) NSString *adTitle;
+@property (nonatomic, copy, nullable) NSString *adTitle;
 
 /**
  * 描述
  */
-@property (nonatomic,copy) NSString *adContent;
+@property (nonatomic, copy, nullable) NSString *adContent;
 
 /**
  * 广告ID
  */
-@property (nonatomic,assign) NSInteger adID;
+@property (nonatomic, assign) NSInteger adID;
 
 /**
  * 创意按钮显示文字
  */
-@property (nonatomic, copy) NSString *buttonText;
+@property (nonatomic, copy, nullable) NSString *buttonText;
 
 /**
  * 广告类型
  */
-@property (nonatomic,assign) NSInteger adType;
+@property (nonatomic, assign) NSInteger adType;
 
 /**
- 是否为视频广告
+ * 广告角标
+ */
+@property (nonatomic, strong, nullable) UIImage *adLogo;
+
+/**
+ * 是否为视频广告
  */
 @property (nonatomic) BOOL isVideoAd;
 
@@ -57,18 +80,28 @@
 @property (nonatomic) double videoDuration;
 
 /**
+ * 视频广告Url
+ */
+@property (nonatomic, copy, nullable) NSString *videoUrl;
+
+/**
+ * 是否自定义视频播放器，注册点击事件之前赋值
+ */
+@property (nonatomic) BOOL isCustomRender;
+
+/**
  * 数据
  */
-@property (nonatomic,strong) id data;
+@property (nonatomic, strong, nullable) id data;
 
 /**
  * 广告主
  */
-@property (nonatomic,strong) id manager;
+@property (nonatomic, strong, nullable) id manager;
 
 /**
  * 缓存的大图Image，注册之后有值
  */
-@property (nonatomic,strong) UIImage *bgImage;
+@property (nonatomic, strong, nullable) UIImage *bgImage;
 
 @end

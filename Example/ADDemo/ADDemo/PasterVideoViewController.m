@@ -7,11 +7,12 @@
 
 #import "PasterVideoViewController.h"
 #import "ADInfo.h"
+#import "SFImageView.h"
 
 @interface PasterVideoViewController () <SFFeedDelegate>
 
 @property (nonatomic,strong) SFFeedManager *feedManager;
-@property (nonatomic,strong) UIImageView *videoView;
+@property (nonatomic,strong) SFImageView *videoView;
 @property (nonatomic, strong) UILabel *timeView;
 @property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic) double videoDuration;
@@ -58,11 +59,13 @@
 - (void)removeVideoView{
     if (_timer) {
         [_timer invalidate];
-        _feedManager = nil;
     }
     if (_videoView) {
         [_videoView removeFromSuperview];
     }
+    [self.feedManager deallocAllFeedProperty];
+    self.feedManager = nil;
+    self.videoView = nil;
 }
 
 #pragma mark FeedAd delegate
@@ -73,7 +76,7 @@
     NSLog(@"广告数据：加载成功");
     if (datas.count > 0) {
         SFFeedAdData *model = datas.firstObject;
-        NSLog(@"视频时长：%f",model.videoDuration);
+        NSLog(@"视频时长：%f == %zd",model.videoDuration, model.adType);
         self.videoDuration = model.videoDuration;
         [self.feedManager registerAdViewForBindImage:self.videoView adData:model clickableViews:@[self.videoView]];
         [self.view addSubview:self.videoView];
@@ -84,7 +87,7 @@
             self.timeView.text = [NSString stringWithFormat:@"%.0f 秒",self.videoDuration];
             __weak typeof(self) weakSelf = self;
             self.timer = [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
-                NSLog(@"视频倒计时：%f",self.videoDuration);
+//                NSLog(@"视频倒计时：%f",self.videoDuration);
                 weakSelf.timeView.text = [NSString stringWithFormat:@"%.0f 秒",weakSelf.videoDuration];
                 if (weakSelf.videoDuration <= 0) {
                     [weakSelf.videoView removeFromSuperview];
@@ -96,11 +99,11 @@
         }
     }
 }
-- (UIImageView *)videoView{
+- (SFImageView *)videoView{
     if (!_videoView) {
         CGFloat width = self.view.frame.size.width-60;
         CGFloat height = 9 * width / 16;
-        _videoView = [[UIImageView alloc] initWithFrame:CGRectMake(30, 400, width, height)];
+        _videoView = [[SFImageView alloc] initWithFrame:CGRectMake(30, 400, width, height)];
         _videoView.backgroundColor = [UIColor lightGrayColor];
     }
     return _videoView;
@@ -136,6 +139,14 @@
  */
 - (void)feedAdDidCloseOtherController{
     NSLog(@"落地页或者appstoe返回事件");
+}
+/**
+ * 视频广告播放状态更改回调json-query
+ *
+ * @param status 视频广告播放状态
+ */
+- (void)feedAdViewPlayerStatusChanged:(SFMediaPlayerStatus)status{
+    NSLog(@"视频广告播放状态更改回调 statue：%zd",status);
 }
 
 - (void)dealloc{

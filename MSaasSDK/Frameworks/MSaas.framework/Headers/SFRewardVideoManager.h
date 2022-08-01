@@ -1,6 +1,6 @@
 //
 //  SFRewardVideoManager.h
-//  TransferPlatform
+//  MSaas
 //
 //  Created by lurich on 2021/10/19.
 //
@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)rewardedVideoDidLoad;
 
 /**
- * 激励视频广告素材加载失败（因为属于聚合SDK，所以该回调可能会调用多次）
+ * 激励视频广告素材加载失败
  * @param error 错误对象
  */
 - (void)rewardedVideoDidFailWithError:(NSError *)error;
@@ -59,6 +59,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, copy) NSString *mediaId;
 
+/**
+ * 用户ID，可选参数，服务端校验奖励时透传
+ */
+@property (nonatomic, copy) NSString *userId;
 /**
  * 加载广告数据
  * @param extra 额外参数

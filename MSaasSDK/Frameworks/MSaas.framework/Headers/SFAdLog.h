@@ -1,6 +1,6 @@
 //
 //  SFAdLog.h
-//  TransferPlatform
+//  MSaas
 //
 //  Created by lurich on 2021/12/24.
 //
@@ -18,6 +18,15 @@
 #define SFLog(FORMAT, ...) fprintf(stderr,"%s:%d\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 #else
 #define SFLog(...)
+#endif
+
+#ifndef SF_MAIN_SAFE
+#define SF_MAIN_SAFE(block)\
+    if (dispatch_queue_get_label(DISPATCH_CURRENT_QUEUE_LABEL) == dispatch_queue_get_label(dispatch_get_main_queue())) {\
+        block();\
+    } else {\
+        dispatch_async(dispatch_get_main_queue(), block);\
+    }
 #endif
 
 #endif /* SFAdLog_h */

@@ -8,38 +8,55 @@
 #import <Foundation/Foundation.h>
 #import <StoreKit/StoreKit.h>
 
-@class SFFeedAdData,SFConfigModelAd_Sources,SFConfigModelAdplace,SFLaunchView,SFFullscreenVideoAdd;
+@class SFFeedAdData,SFAdSourcesModel,SFConfigModelAdplace,SFLaunchView,SFFullscreenVideoAdd,SFSkipAdButton,SFInterstitialView;
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^ADSuccess)(SFConfigModelAd_Sources *model);
+typedef void(^ADSuccess)(SFAdSourcesModel *model);
 
 @interface SFBaseManager : NSObject
 
 @property (nonatomic, copy, nullable) ADSuccess successBlock;
 
-@property (nonatomic, strong) SFConfigModelAd_Sources * _Nullable baseModel;
+@property (nonatomic, strong) SFAdSourcesModel * _Nullable baseModel;
 
+@property (nonatomic, strong, nullable) SFLaunchView *yxADView;
+@property (nonatomic, strong, nullable) SFInterstitialView *sf_InterstitialView;
 @property (nonatomic, strong) UIButton *closeBtn;
 @property (nonatomic, strong) UIImageView *adLogoView;
+@property (nonatomic, strong) SFSkipAdButton *skipButton;
 
 //开发者需传入用来弹出目标页的ViewController，一般为当前ViewController
 @property (nonatomic, weak) UIViewController *showAdController;
 //销毁不用的属性，防止内存泄漏
 - (void)deallocAllProperty;
-//加载广告
-- (void)loadADWithModel:(SFConfigModelAd_Sources *)model;
+//获取最顶层控制器
+- (UIViewController *)topVC;
 
+//以下三个方法必须子类实现
+//加载广告
+- (void)loadADWithModel:(SFAdSourcesModel *)model;
+//联盟竞价获取参数
+- (NSDictionary *)getAdImpWithModel:(SFAdSourcesModel *)model;
+//加载bidding广告
+- (void)loadBiddingADWithModel:(SFAdSourcesModel *)model;
+
+//UIViewLayoutConstraintCreation
 - (void)sf_ViewAnchorWithView:(UIView *)view Top:(NSLayoutYAxisAnchor *)top Left:(NSLayoutXAxisAnchor *)left Bottom:(NSLayoutYAxisAnchor *)bottom Right:(NSLayoutXAxisAnchor *)right Padding:(UIEdgeInsets)padding Size:(CGSize)size;
+
+//联盟竞价失败原因上报
+- (void)biddingAdFailWithPrice:(NSString *)price;
+//联盟竞价成功上报
+- (void)biddingAdSuccessWithPrice:(NSString *)price SecondPrice:(NSString *)secondPrice;
 
 @end
 
 @interface SFBaseManager (SFSplashAdd)
 
 //开屏参数
-@property (nonatomic, strong) SFLaunchView * _Nullable yxADView;
 @property (nonatomic) CGRect frame;
 @property (nonatomic) NSInteger duration;
 @property (nonatomic) NSInteger waitDataDuration;
+@property (nonatomic) NSInteger hotspot_type;
 
 - (void)showSplashAdInWindow:(UIWindow *)window withBottomView:(UIView *)bottomView;
 

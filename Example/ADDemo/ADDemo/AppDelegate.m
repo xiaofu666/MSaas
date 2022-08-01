@@ -28,7 +28,7 @@
     
     [SFAdSDKManager registerAppId:app_id];
     
-    [self requestIDFA];
+//    [self requestIDFA];
     return YES;
 }
 
