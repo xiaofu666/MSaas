@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-testPod/Pods-testPod-frameworks.sh
+${BUILT_PRODUCTS_DIR}/BURelyFoundation/BURelyFoundation.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/KSAdSDK/KSAdSDK.framework/KSAdSDK
