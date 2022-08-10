@@ -10,7 +10,9 @@
 #import <UIKit/UIKit.h>
 
 #define MSaasGdtMuteEnable @"MSaasGdtMuteEnable"
-#define MSaasGdtMuteEnableSwitchKey @"MSaasGdtMuteEnableSwitchKey"
+#define MSaasGdtPlayEnable @"MSaasGdtPlayEnable"
+
+#define MSaasGdtEnableSwitchKey @"MSaasGdtEnableSwitchKey"
 
 @interface SFFeedAdData : NSObject
 

@@ -99,6 +99,8 @@ typedef void(^ADSuccess)(SFAdSourcesModel *model);
 //原生广告绑定视图和注册
 - (void)registerAdViewForBindImage:(UIImageView *)view adData:(SFFeedAdData *)adData clickableViews:(NSArray *)views;
 
+- (void)changeAdViewController:(UIViewController *)adViewController Data:(SFFeedAdData *)adData;
+
 @end
 
 

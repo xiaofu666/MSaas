@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SFAdSDKManager : NSObject<WKScriptMessageHandler>
+@interface SFAdSDKManager : NSObject<WKScriptMessageHandler,WKNavigationDelegate>
 
 @property (nonatomic, weak) id<WKScriptMessageHandler> scriptDelegate;
 
