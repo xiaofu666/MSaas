@@ -64,11 +64,11 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * 设置开屏广告的停留时间default 5s （建议在 3s-5s 内）
  */
-@property(nonatomic, assign)NSInteger duration;
+@property (nonatomic, assign) NSInteger duration;
 /**
  * 设置开屏广告的等待时间 default 3s （建议在 3s-5s 内）
  */
-@property(nonatomic, assign)NSInteger waitDataDuration;
+@property (nonatomic, assign) NSInteger waitDataDuration;
 /**
  * 用来弹出目标页的ViewController，一般为当前ViewController或root控制器
  */
