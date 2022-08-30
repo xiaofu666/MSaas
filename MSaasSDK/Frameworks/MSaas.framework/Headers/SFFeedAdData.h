@@ -72,6 +72,11 @@
 @property (nonatomic, strong, nullable) UIImage *adLogo;
 
 /**
+ * 广告主名称
+ */
+@property (nonatomic, copy, nullable) NSString *adOriginName;
+
+/**
  * 是否为视频广告
  */
 @property (nonatomic) BOOL isVideoAd;
