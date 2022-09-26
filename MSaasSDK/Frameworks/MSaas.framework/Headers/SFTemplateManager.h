@@ -1,6 +1,6 @@
 //
 //  SFInterstitialManager.h
-//  MSaas
+//  TransferPlatform
 //
 //  Created by lurich on 2021/9/17.
 //
@@ -35,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)templateAdDidLoadViews:(NSArray<__kindof UIView *> *)views;
 /**
- * 广告数据：加载失败
+ * 广告数据：加载失败（因为属于聚合SDK，所以该回调可能会调用多次）
  * @param error : 错误信息
  */
 - (void)templateAdDidFailed:(NSError *)error;
@@ -87,6 +87,16 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param adv_id 广告主在MedPro平台对应的adv_id
 /// @param className 自定义Adapter的类名
 - (void)registerADVId:(NSString *)adv_id ClassName:(NSString *)className;
+
+//针对直客广告自定义
+/**
+ 模板样式
+ */
+@property (nonatomic) SFTemplateStyleOptions style;
+/**
+ 边距，默认20
+ */
+@property (nonatomic) CGFloat margin;
 
 @end
 

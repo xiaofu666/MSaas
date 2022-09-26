@@ -21,7 +21,7 @@
 ## 使用CocoaPods安装
 
 
-[CocoaPods](https://cocoapods.org) 是Objective-C的依赖管理器，它可以自动化并简化在项目中使用Bytedance-UnionAD等第三方库的过程。您可以使用以下命令安装它：
+[CocoaPods](https://cocoapods.org) 是Xcode项目中的依赖管理器，它可以自动化并简化您在项目中使用MSaas等第三方库的过程。您可以使用以下命令安装它：
 
 ```ruby
 $ gem install cocoapods
@@ -29,7 +29,7 @@ $ gem install cocoapods
 
 ### Podfile
 
-要使用的CocoaPods MSaasSDK集成到您的Xcode项目，在您指定它 **Podfile**:
+要使用的CocoaPods MSaasSDK集成到您的Xcode项目，需要您指定它的 **Podfile**:
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'

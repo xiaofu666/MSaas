@@ -1,6 +1,6 @@
 //
 //  SFInterstitialManager.h
-//  MSaas
+//  TransferPlatform
 //
 //  Created by lurich on 2021/9/17.
 //
@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)interstitialAdDidLoad;
 /**
- * 广告数据：加载失败
+ * 广告数据：加载失败（因为属于聚合SDK，所以该回调可能会调用多次）
  * @param error : 错误信息
  */
 - (void)interstitialAdDidFailed:(NSError *)error;

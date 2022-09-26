@@ -1,6 +1,6 @@
 //
 //  SFSplashManager.h
-//  MSaas
+//  TransferPlatform
 //
 //  Created by lurich on 2021/9/17.
 //
@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)splashAdDidLoad;
 /**
- * 广告数据：加载失败
+ * 广告数据：加载失败（因为属于聚合SDK，所以该回调可能会调用多次）
  * @param error : 错误信息
  */
 - (void)splashAdDidFailed:(NSError *)error;
@@ -39,10 +39,6 @@ NS_ASSUME_NONNULL_BEGIN
  * 广告视图：关闭
  */
 - (void)splashAdDidShowFinish;
-/**
- * 广告成功渲染
- */
-- (void)splashAdDidRender;
 
 @end
 
@@ -64,15 +60,11 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * 设置开屏广告的停留时间default 5s （建议在 3s-5s 内）
  */
-@property (nonatomic, assign) NSInteger duration;
+@property(nonatomic, assign)NSInteger duration;
 /**
  * 设置开屏广告的等待时间 default 3s （建议在 3s-5s 内）
  */
-@property (nonatomic, assign) NSInteger waitDataDuration;
-/**
- * 用来弹出目标页的ViewController，一般为当前ViewController或root控制器
- */
-@property (nonatomic, weak) UIViewController *showAdController;
+@property(nonatomic, assign)NSInteger waitDataDuration;
 
 //加载广告数据
 - (void)loadAdData;

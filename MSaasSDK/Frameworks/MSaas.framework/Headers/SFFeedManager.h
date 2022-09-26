@@ -1,6 +1,6 @@
 //
 //  SFInterstitialManager.h
-//  MSaas
+//  TransferPlatform
 //
 //  Created by lurich on 2021/9/17.
 //
@@ -9,20 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @class SFFeedAdData;
-
-/**
- *  视频播放器状态
- *
- *  播放器只可能处于以下状态中的一种
- */
-typedef NS_ENUM(NSUInteger, SFMediaPlayerStatus) {
-    SFMediaPlayerStatusInitial = 0,         // 初始状态
-    SFMediaPlayerStatusLoading = 1,         // 加载中
-    SFMediaPlayerStatusStarted = 2,         // 开始播放
-    SFMediaPlayerStatusPaused = 3,          // 用户行为导致暂停
-    SFMediaPlayerStatusError = 4,           // 播放出错
-    SFMediaPlayerStatusStoped = 5,          // 播放停止
-};
 
 NS_ASSUME_NONNULL_BEGIN
 @protocol SFFeedDelegate <NSObject>
@@ -34,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)feedAdDidLoadDatas:(NSArray<__kindof SFFeedAdData *> *)datas;
 /**
- * 广告数据：加载失败
+ * 广告数据：加载失败（因为属于聚合SDK，所以该回调可能会调用多次）
  * @param error : 错误信息
  */
 - (void)feedAdDidFailed:(NSError *)error;
@@ -50,11 +36,6 @@ NS_ASSUME_NONNULL_BEGIN
  * 落地页或者appstoe返回事件
  */
 - (void)feedAdDidCloseOtherController;
-/**
- * 视频广告播放状态更改回调
- * @param status 视频广告播放状态
- */
-- (void)feedAdViewPlayerStatusChanged:(SFMediaPlayerStatus)status;
 
 @end
 
@@ -100,7 +81,6 @@ typedef NS_ENUM(NSInteger, SFFeedAdType) {
 /// @param adv_id 广告主在MedPro平台对应的adv_id
 /// @param className 自定义Adapter的类名
 - (void)registerADVId:(NSString *)adv_id ClassName:(NSString *)className;
-- (void)deallocAllFeedProperty;
 
 @end
 
