@@ -1,0 +1,27 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'testPod' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # MSaas主包
+  pod 'MSaas', :git => 'https://github.com/xiaofu666/MSaas'
+
+  # 以下按需导入
+  # 穿山甲广告主适配包
+  pod 'SFAdPangolinAdapter'
+  # 广点通广告主适配包
+  pod 'SFAdGdtAdapter'
+  # 快手广告主适配包
+  pod 'SFAdKsAdapter'
+  # 京准通广告主适配包
+  pod 'SFAdJztAdapter'
+  # 百度广告主适配包
+  pod 'SFAdBaiduAdapter'
+  # sigmob广告主适配包
+  pod 'SFAdSigmobAdapter'
+  # Mintegral广告主适配包
+  pod 'SFAdMtgAdapter'
+
+end
