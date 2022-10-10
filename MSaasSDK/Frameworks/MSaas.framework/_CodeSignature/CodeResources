@@ -4,10 +4,6 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>.DS_Store</key>
-		<data>
-		GLyRd+NcdCbMwrotL8Z2GA5Husw=
-		</data>
 		<key>Headers/MSaas.h</key>
 		<data>
 		lZf5QyZqU8ei0K9+AwlaMgvlAu8=
@@ -18,7 +14,7 @@
 		</data>
 		<key>Headers/SFAdSourcesModel.h</key>
 		<data>
-		IVDKC0G6DkR7GdnBvbg8hW9eY3k=
+		/GACgzOdNee1DI6v9jCxvDIjGpY=
 		</data>
 		<key>Headers/SFBannerManager.h</key>
 		<data>
@@ -82,7 +78,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		gC4mYx4rANh5p58qZA1PZa/Z57w=
+		oZUBi3f5BwKeWZrdpHGtcXlOjzo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -117,11 +113,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			IVDKC0G6DkR7GdnBvbg8hW9eY3k=
+			/GACgzOdNee1DI6v9jCxvDIjGpY=
 			</data>
 			<key>hash2</key>
 			<data>
-			N70qwYCTC4+MIAHL4LPDGFwO2VNeCxRVTF2Kg9OkirY=
+			dP2boUm9z0bTnmkTtHUfcCqZ2e4OWhxWca5SoOAdn5k=
 			</data>
 		</dict>
 		<key>Headers/SFBannerManager.h</key>

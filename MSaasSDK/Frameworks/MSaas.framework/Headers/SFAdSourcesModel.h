@@ -65,6 +65,8 @@ typedef enum : NSUInteger {
 @property (nonatomic, assign) NSInteger button_size;
 //是否缓存广告
 @property (nonatomic) BOOL isCache;
+//素材ID
+@property (nonatomic, copy) NSString *cid;
 
 //自定义参数，json格式
 @property (nonatomic, copy) NSString *ext;
