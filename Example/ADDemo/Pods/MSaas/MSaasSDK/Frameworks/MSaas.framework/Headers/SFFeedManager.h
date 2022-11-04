@@ -58,11 +58,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-typedef NS_ENUM(NSInteger, SFFeedAdType) {
-    SFFeedAdTypeImage         = 0,       // 信息流
-    SFFeedAdTypePaster        = 1,       // 贴片
-};
-
 @interface SFFeedManager : NSObject
 /**
  * 广告回调的代理
@@ -76,10 +71,6 @@ typedef NS_ENUM(NSInteger, SFFeedAdType) {
  * 广告数量,不传则后台控制
  */
 @property (nonatomic) NSInteger adCount;
-/**
- * 请求广告类型，默认是SFFeedAdTypeImage
- */
-@property (nonatomic) SFFeedAdType adType;
 /**
  * 开发者需传入用来弹出目标页的ViewController，一般为当前ViewController
  */

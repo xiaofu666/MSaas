@@ -22,7 +22,6 @@ typedef void(^ADSuccess)(SFAdSourcesModel *model);
 @property (nonatomic, strong, nullable) SFLaunchView *yxADView;
 @property (nonatomic, strong, nullable) SFInterstitialView *sf_InterstitialView;
 @property (nonatomic, strong) UIButton *closeBtn;
-@property (nonatomic, strong) UIImageView *adLogoView;
 @property (nonatomic, strong) SFSkipAdButton *skipButton;
 
 //开发者需传入用来弹出目标页的ViewController，一般为当前ViewController
@@ -39,6 +38,8 @@ typedef void(^ADSuccess)(SFAdSourcesModel *model);
 - (NSDictionary *)getAdImpWithModel:(SFAdSourcesModel *)model;
 //加载bidding广告
 - (void)loadBiddingADWithModel:(SFAdSourcesModel *)model;
+//上报ECPM
+- (void)s2sBidECPMWithPrice:(NSString *)price;
 
 //UIViewLayoutConstraintCreation
 - (void)sf_ViewAnchorWithView:(UIView *)view Top:(NSLayoutYAxisAnchor *)top Left:(NSLayoutXAxisAnchor *)left Bottom:(NSLayoutYAxisAnchor *)bottom Right:(NSLayoutXAxisAnchor *)right Padding:(UIEdgeInsets)padding Size:(CGSize)size;
@@ -93,11 +94,13 @@ typedef void(^ADSuccess)(SFAdSourcesModel *model);
 
 //原生广告,模板广告的请求个数
 @property (nonatomic) NSInteger adCount;
-//请求广告类型
-@property (nonatomic) NSInteger adType;
 
 //原生广告绑定视图和注册
 - (void)registerAdViewForBindImage:(UIImageView *)view adData:(SFFeedAdData *)adData clickableViews:(NSArray *)views;
+//模板广告渲染视图
+- (void)renderViewWithViewArray:(NSArray *)viewArray;
+//更换 showAdController
+- (void)changeAdViewController:(UIViewController *)adViewController Data:(SFFeedAdData *)adData;
 
 @end
 

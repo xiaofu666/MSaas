@@ -21,10 +21,13 @@ typedef void(^ShowBlock)(void);
 @property (nonatomic) CGRect skipFrame;
 @property (nonatomic, assign) BOOL frameSet;
 
-- (void)restrictedClickAreaWithFrame:(CGRect)frame;
-
-- (UIView *)splashViewWithModel:(SFFeedAdData *)model;
+@property (nonatomic) CGRect adFrame;
 @property (nonatomic, strong) UIImageView *bigImgView;
+@property (nonatomic, strong) UIImageView *backImgView;
+@property (nonatomic, strong) SFFeedAdData *model;
+@property (nonatomic, strong) UIImageView *iconView;
+
+- (void)restrictedClickAreaWithFrame:(CGRect)frame;
 
 @property (nonatomic, copy) ShowBlock block;
 

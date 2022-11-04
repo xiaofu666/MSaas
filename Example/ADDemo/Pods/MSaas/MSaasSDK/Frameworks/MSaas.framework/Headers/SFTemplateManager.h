@@ -8,23 +8,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSUInteger, SFTemplateStyleOptions) {
-    /* 默认样式-图文混合 */
-    SFTemplateStyleDefault = 0,
-    /* 文字浮层 */
-    SFTemplateStyleNest,
-    /* 上文下图 */
-    SFTemplateStyleTTBI,
-    /* 上图下文 */
-    SFTemplateStyleTIBT,
-    /* 左文右图 */
-    SFTemplateStyleLTRI,
-    /* 左图右文 */
-    SFTemplateStyleLIRT,
-    /* 纯图片 */
-    SFTemplateStyleImage,
-};
-
 NS_ASSUME_NONNULL_BEGIN
 @protocol SFTemplateDelegate <NSObject>
 

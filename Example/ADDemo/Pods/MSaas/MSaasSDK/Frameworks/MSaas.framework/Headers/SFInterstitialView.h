@@ -21,15 +21,17 @@ typedef void(^ShowBlock)(void);
 
 @property (nonatomic, readonly) UIEdgeInsets sf_safeAreaInsets;
 
-@property (nonatomic, strong) SFAdSourcesModel *adModel;
+@property (nonatomic, weak, nullable) SFAdSourcesModel *adModel;
 
 @property (nonatomic, assign) double currentTime;
 
-@property (nonatomic, strong) UIImage *logoImg;
+//@property (nonatomic, strong) UIImage *logoImg;
+
+@property (nonatomic, strong) UIImageView *backImageView;
+
+@property (nonatomic, strong, nullable) SFFeedAdData *model;
 
 -(void)startGCDTimer;
-
-- (UIView *)interstitialViewWithModel:(SFFeedAdData *)model;
 
 @property (nonatomic, copy) ShowBlock block;
 

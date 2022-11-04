@@ -10,12 +10,20 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef enum : NSUInteger {
+    SFApiBidAD = 1,
+    SFSDKServerBidAD,
+    SFSDKBidAD,
+    SFSDKAD,
+    SFSDKBottomAD,
+} SFADType;
+
 @interface SFAdSourcesModel : NSObject
-//adId
+//请求的广告唯一Id
 @property (nonatomic, copy) NSString *ad_id;
-
+//广告源在平台的id
 @property (nonatomic, assign) NSInteger adv_id;
-
+//广告源名称
 @property (nonatomic, copy) NSString *adv_name;
 //广告主key值
 @property (nonatomic, copy) NSString *app_key;
@@ -25,25 +33,21 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *tagid;
 //广告源版位id
 @property (nonatomic, copy) NSString *slot_id;
-//底价
+//广告的eCPM
 @property (nonatomic, assign) double bidfloor;
-//直客竞价
-@property (nonatomic, assign) BOOL has_api_bid;
-//联盟竞价
-@property (nonatomic, assign) BOOL has_ad_bid;
-//联盟SDK竞价
-@property (nonatomic, assign) BOOL sdk_bidding;
+//1、直客竞价 2、联盟服务端竞价  3、联盟SDK竞价  4、固价瀑布流  5、联盟打底
+@property (nonatomic, assign) SFADType adType;
 //token
 @property (nonatomic, copy) NSString *token;
 //竞价价格
 @property (nonatomic, assign) double price;
-
+//平台广告位ID
 @property (nonatomic, copy) NSString *place_id;
-
+//分组id
 @property (nonatomic, copy) NSString *group_id;
-
+//A/B测试id
 @property (nonatomic, copy) NSString *test_id;
-
+//是否开启跳过 "A"=开启，"S"=关闭
 @property (nonatomic, copy) NSString *skip;
 //竞价胜出时 调用的胜出通知 URL。
 @property (nonatomic, copy) NSString *nurl;
@@ -59,6 +63,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSInteger count_down;
 //插屏按钮大小,范围0-100,默认50
 @property (nonatomic, assign) NSInteger button_size;
+//是否缓存广告
+@property (nonatomic) BOOL isCache;
+//素材ID
+@property (nonatomic, copy) NSString *cid;
 
 //自定义参数，json格式
 @property (nonatomic, copy) NSString *ext;

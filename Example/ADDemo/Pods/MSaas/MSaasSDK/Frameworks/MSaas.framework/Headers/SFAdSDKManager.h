@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SFAdSDKManager : NSObject<WKScriptMessageHandler>
+@interface SFAdSDKManager : NSObject<WKScriptMessageHandler,WKNavigationDelegate>
 
 @property (nonatomic, weak) id<WKScriptMessageHandler> scriptDelegate;
 
@@ -36,6 +36,11 @@ NS_ASSUME_NONNULL_BEGIN
 //获取SDK Version 版本号
 + (NSString *)SDKVersion;
 
+//检查集成的联盟SDK版本号
++ (void)checkSdkIntegration;
+
+//开启联盟SDK回调日志
++ (void)unionAdCallbackLog:(BOOL)open;
 
 @end
 
