@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "SFBaseAdManager.h"
 
 @class SFFeedAdData;
 
@@ -58,7 +59,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface SFFeedManager : NSObject
+@interface SFFeedManager : SFBaseAdManager
 /**
  * 广告回调的代理
  */

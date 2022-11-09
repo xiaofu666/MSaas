@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "SFBaseAdManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -48,7 +49,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface SFRewardVideoManager : NSObject
+@interface SFRewardVideoManager : SFBaseAdManager
 
 /**
  * 广告回调的代理

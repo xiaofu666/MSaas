@@ -67,6 +67,8 @@ typedef enum : NSUInteger {
 @property (nonatomic) BOOL isCache;
 //素材ID
 @property (nonatomic, copy) NSString *cid;
+//广告加载ID
+@property (nonatomic, copy) NSString *req_id;
 
 //自定义参数，json格式
 @property (nonatomic, copy) NSString *ext;

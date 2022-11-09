@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "SFBaseAdManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 @protocol SFSplashDelegate <NSObject>
@@ -46,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface SFSplashManager : NSObject
+@interface SFSplashManager : SFBaseAdManager
 /**
  * 广告回调的代理
  */

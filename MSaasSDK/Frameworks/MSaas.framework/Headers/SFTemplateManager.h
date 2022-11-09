@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "SFBaseAdManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 @protocol SFTemplateDelegate <NSObject>
@@ -41,7 +42,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface SFTemplateManager : NSObject
+@interface SFTemplateManager : SFBaseAdManager
 /**
  * 广告回调的代理
  */
