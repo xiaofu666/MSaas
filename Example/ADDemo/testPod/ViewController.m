@@ -40,7 +40,6 @@
      @{@"class":@"InterstitialViewController",@"name":@"插屏广告"},
      @{@"class":@"MotivationVideoViewController",@"name":@"激励视频"},
      @{@"class":@"FullscreenVideoViewController",@"name":@"全屏视频"},
-//     @{@"class":@"ScrollerBannerViewController",@"name":@"draw视频流"},
      @{@"class":@"PasterVideoViewController",@"name":@"视频贴片"},
      @{@"class":@"IDFAViewController",@"name":@"查看IDFA"}
     ]];

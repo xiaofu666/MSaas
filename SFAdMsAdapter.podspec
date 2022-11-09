@@ -24,6 +24,6 @@ Pod::Spec.new do |s|
   s.xcconfig = { "OTHER_LDFLAGS" => "-ObjC" }
   s.pod_target_xcconfig = { 'VALID_ARCHS[sdk=iphonesimulator*]' => '' }
 
-  s.dependency 'MSMobAdSDK/MS'
+  s.dependency 'MSMobAdSDK/MS', '~>1.1.1.11'
   
 end

@@ -33,7 +33,6 @@
 {
     CGFloat imgW = [UIScreen mainScreen].bounds.size.width - 60;
     self.interstitialAd = [SFInterstitialManager new];
-    [self.interstitialAd registerADVId:@"2" ClassName:@"CustomGdtInterstitialManager"];
     self.interstitialAd.mediaId = interstitial_id;
     self.interstitialAd.size = CGSizeMake(imgW, imgW*16/9);
     self.interstitialAd.showAdController = self.navigationController;
