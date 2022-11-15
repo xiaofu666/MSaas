@@ -1,6 +1,0 @@
-framework module MSaas {
-  umbrella header "MSaas.h"
-
-  export *
-  module * { export * }
-}

@@ -26,15 +26,11 @@
     [button setTitle:@"InterstitialAdTest" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(interstitialAdBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
-    
-    // Do any additional setup after loading the view from its nib.
 }
 - (void)interstitialAdBtnClicked:(UIButton*)button
 {
-    CGFloat imgW = [UIScreen mainScreen].bounds.size.width - 60;
     self.interstitialAd = [SFInterstitialManager new];
     self.interstitialAd.mediaId = interstitial_id;
-    self.interstitialAd.size = CGSizeMake(imgW, imgW*16/9);
     self.interstitialAd.showAdController = self.navigationController;
     self.interstitialAd.delegate = self;
     [self.interstitialAd loadAdData];
@@ -73,22 +69,9 @@
     NSLog(@"插屏广告关闭");
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 - (void)dealloc
 {
     NSLog(@"%@ %@",[self class],NSStringFromSelector(_cmd));
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

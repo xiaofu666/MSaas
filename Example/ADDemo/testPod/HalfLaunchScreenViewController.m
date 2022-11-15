@@ -35,17 +35,17 @@
 }
 - (void)halfLaunchScreenBtnClicked:(UIButton*)sender
 {
-    SFSplashManager *manager = [SFSplashManager new];
-    manager.delegate = self;
-    manager.mediaId = splash_id;
     UILabel *bottom = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height * 0.2)];
     bottom.text = @"AD Demo";
     bottom.textAlignment = NSTextAlignmentCenter;
     bottom.font = [UIFont systemFontOfSize:35];
     bottom.userInteractionEnabled = YES;
     bottom.backgroundColor = [UIColor whiteColor];
-    //bottom 为含logo的view
-    manager.bottomView = bottom;
+    
+    SFSplashManager *manager = [SFSplashManager new];
+    manager.delegate = self;
+    manager.mediaId = splash_id;
+    manager.bottomView = bottom; //bottom 为含logo的view
     [manager loadAdData];
     self.manager = manager;
     NSLog(@"开始请求开屏广告");

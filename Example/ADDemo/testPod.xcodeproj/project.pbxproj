@@ -122,35 +122,35 @@
 			isa = PBXGroup;
 			children = (
 				E78CDF0D2897B85400B0E5AA /* ADInfo.h */,
-				E78CDF092897B85400B0E5AA /* ADTableViewCell.h */,
-				E78CDF062897B85400B0E5AA /* ADTableViewCell.m */,
-				E78CDF0F2897B85500B0E5AA /* ADTableViewCell.xib */,
 				E78CDF022897B85400B0E5AA /* AppDelegate.h */,
 				E78CDEFB2897B85400B0E5AA /* AppDelegate.m */,
-				E78CDEFF2897B85400B0E5AA /* BannerViewController.h */,
-				E78CDEFC2897B85400B0E5AA /* BannerViewController.m */,
-				E78CDF162897B85500B0E5AA /* FeedAdViewController.h */,
-				E78CDF102897B85500B0E5AA /* FeedAdViewController.m */,
-				E78CDF0C2897B85400B0E5AA /* FullscreenVideoViewController.h */,
-				E78CDF0A2897B85400B0E5AA /* FullscreenVideoViewController.m */,
-				E78CDF122897B85500B0E5AA /* HalfLaunchScreenViewController.h */,
-				E78CDEFD2897B85400B0E5AA /* HalfLaunchScreenViewController.m */,
-				E78CDEFE2897B85400B0E5AA /* IDFAViewController.h */,
-				E78CDF0B2897B85400B0E5AA /* IDFAViewController.m */,
-				E78CDF0E2897B85400B0E5AA /* InterstitialViewController.h */,
-				E78CDEFA2897B85400B0E5AA /* InterstitialViewController.m */,
+				E78CDF132897B85500B0E5AA /* ViewController.h */,
+				E78CDEF92897B85400B0E5AA /* ViewController.m */,
 				E78CDF142897B85500B0E5AA /* LaunchScreenViewController.h */,
 				E78CDF002897B85400B0E5AA /* LaunchScreenViewController.m */,
+				E78CDF122897B85500B0E5AA /* HalfLaunchScreenViewController.h */,
+				E78CDEFD2897B85400B0E5AA /* HalfLaunchScreenViewController.m */,
+				E78CDF0E2897B85400B0E5AA /* InterstitialViewController.h */,
+				E78CDEFA2897B85400B0E5AA /* InterstitialViewController.m */,
+				E78CDEFF2897B85400B0E5AA /* BannerViewController.h */,
+				E78CDEFC2897B85400B0E5AA /* BannerViewController.m */,
+				E78CDF0C2897B85400B0E5AA /* FullscreenVideoViewController.h */,
+				E78CDF0A2897B85400B0E5AA /* FullscreenVideoViewController.m */,
 				E78CDF112897B85500B0E5AA /* MotivationVideoViewController.h */,
 				E78CDF032897B85400B0E5AA /* MotivationVideoViewController.m */,
+				E78CDF162897B85500B0E5AA /* FeedAdViewController.h */,
+				E78CDF102897B85500B0E5AA /* FeedAdViewController.m */,
 				E78CDF152897B85500B0E5AA /* NativeExpressAdController.h */,
 				E78CDF072897B85400B0E5AA /* NativeExpressAdController.m */,
 				E78CDF012897B85400B0E5AA /* PasterVideoViewController.h */,
 				E78CDF082897B85400B0E5AA /* PasterVideoViewController.m */,
+				E78CDEFE2897B85400B0E5AA /* IDFAViewController.h */,
+				E78CDF0B2897B85400B0E5AA /* IDFAViewController.m */,
 				E78CDF042897B85400B0E5AA /* SFImageView.h */,
 				E78CDF052897B85400B0E5AA /* SFImageView.m */,
-				E78CDF132897B85500B0E5AA /* ViewController.h */,
-				E78CDEF92897B85400B0E5AA /* ViewController.m */,
+				E78CDF092897B85400B0E5AA /* ADTableViewCell.h */,
+				E78CDF062897B85400B0E5AA /* ADTableViewCell.m */,
+				E78CDF0F2897B85500B0E5AA /* ADTableViewCell.xib */,
 				E78CDEE92897AD4F00B0E5AA /* Main.storyboard */,
 				E78CDEEC2897AD6500B0E5AA /* Assets.xcassets */,
 				E78CDEEE2897AD6600B0E5AA /* LaunchScreen.storyboard */,
@@ -347,7 +347,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -399,7 +399,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -424,13 +424,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lurich.testPod;
+				PRODUCT_BUNDLE_IDENTIFIER = com.medpro.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -454,13 +454,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lurich.testPod;
+				PRODUCT_BUNDLE_IDENTIFIER = com.medpro.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";

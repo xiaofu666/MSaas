@@ -55,6 +55,7 @@
     [self.feedManager loadAdData];
 }
 - (void)removeVideoView{
+    [self.feedManager deallocAllFeedProperty];
     if (_timer) {
         [_timer invalidate];
         _feedManager = nil;

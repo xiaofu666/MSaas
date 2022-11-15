@@ -10,39 +10,31 @@
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
-@property (nonatomic,strong) UITableView *tableView;
-@property (nonatomic, strong) NSMutableArray<NSDictionary *> *dataArr;
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, copy) NSArray *dataArr;
 
 @end
 
 @implementation ViewController
 
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-}
-- (void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"广告组件";
     
-    self.dataArr = [NSMutableArray array];
-    
-    [self.dataArr addObjectsFromArray:@[
-     @{@"class":@"LaunchScreenViewController",@"name":@"开屏广告（全屏样式）"},
-     @{@"class":@"HalfLaunchScreenViewController",@"name":@"开屏广告（半屏样式）"},
-     @{@"class":@"FeedAdViewController",@"name":@"原生信息流广告"},
-     @{@"class":@"NativeExpressAdController",@"name":@"模板广告"},
-     @{@"class":@"BannerViewController",@"name":@"横幅广告"},
-     @{@"class":@"InterstitialViewController",@"name":@"插屏广告"},
-     @{@"class":@"MotivationVideoViewController",@"name":@"激励视频"},
-     @{@"class":@"FullscreenVideoViewController",@"name":@"全屏视频"},
-     @{@"class":@"PasterVideoViewController",@"name":@"视频贴片"},
-     @{@"class":@"IDFAViewController",@"name":@"查看IDFA"}
-    ]];
+    self.dataArr = @[
+         @{@"class":@"LaunchScreenViewController",@"name":@"开屏广告（全屏样式）"},
+         @{@"class":@"HalfLaunchScreenViewController",@"name":@"开屏广告（半屏样式）"},
+         @{@"class":@"InterstitialViewController",@"name":@"插屏广告"},
+         @{@"class":@"BannerViewController",@"name":@"横幅广告"},
+         @{@"class":@"FullscreenVideoViewController",@"name":@"全屏视频"},
+         @{@"class":@"MotivationVideoViewController",@"name":@"激励视频"},
+         @{@"class":@"FeedAdViewController",@"name":@"原生信息流广告"},
+         @{@"class":@"NativeExpressAdController",@"name":@"模板广告"},
+         @{@"class":@"PasterVideoViewController",@"name":@"视频贴片"},
+         @{@"class":@"IDFAViewController",@"name":@"查看IDFA"}
+    ];
     
     [self.view addSubview:self.tableView];
 }
@@ -58,16 +50,11 @@
     return _tableView;
 }
 
-static NSString * cellID = @"CELL";
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
-}
-
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.dataArr.count;
 }
 
+static NSString * cellID = @"CELL";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellID];
     if (!cell) {
