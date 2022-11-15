@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C40321EBCBBF48BB4F17D0C9 /* Pods_testPod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F152B62801D55FCA81A111E /* Pods_testPod.framework */; };
+		E73A7D862923A8B700B9A9B3 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A7D852923A8B700B9A9B3 /* File.swift */; };
 		E78CDEEB2897AD4F00B0E5AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E78CDEE92897AD4F00B0E5AA /* Main.storyboard */; };
 		E78CDEED2897AD6500B0E5AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E78CDEEC2897AD6500B0E5AA /* Assets.xcassets */; };
 		E78CDEF02897AD6600B0E5AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E78CDEEE2897AD6600B0E5AA /* LaunchScreen.storyboard */; };
@@ -31,8 +32,8 @@
 
 /* Begin PBXFileReference section */
 		0F152B62801D55FCA81A111E /* Pods_testPod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testPod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		387641F9B56EF8FB65DDCB1C /* Pods-testPod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testPod.release.xcconfig"; path = "Target Support Files/Pods-testPod/Pods-testPod.release.xcconfig"; sourceTree = "<group>"; };
-		5CBB10831490D7A3015DBB5C /* Pods-testPod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testPod.debug.xcconfig"; path = "Target Support Files/Pods-testPod/Pods-testPod.debug.xcconfig"; sourceTree = "<group>"; };
+		E73A7D842923A8B700B9A9B3 /* testPod-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "testPod-Bridging-Header.h"; sourceTree = "<group>"; };
+		E73A7D852923A8B700B9A9B3 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		E78CDEDD2897AD4F00B0E5AA /* testPod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testPod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E78CDEEA2897AD4F00B0E5AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E78CDEEC2897AD6500B0E5AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,15 +84,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0D1EDE675DB33AFF71F4FEF7 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				5CBB10831490D7A3015DBB5C /* Pods-testPod.debug.xcconfig */,
-				387641F9B56EF8FB65DDCB1C /* Pods-testPod.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		70695C5F7007C10BBD97DC9F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,7 +97,6 @@
 			children = (
 				E78CDEDF2897AD4F00B0E5AA /* testPod */,
 				E78CDEDE2897AD4F00B0E5AA /* Products */,
-				0D1EDE675DB33AFF71F4FEF7 /* Pods */,
 				70695C5F7007C10BBD97DC9F /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -151,11 +142,13 @@
 				E78CDF092897B85400B0E5AA /* ADTableViewCell.h */,
 				E78CDF062897B85400B0E5AA /* ADTableViewCell.m */,
 				E78CDF0F2897B85500B0E5AA /* ADTableViewCell.xib */,
+				E73A7D852923A8B700B9A9B3 /* File.swift */,
 				E78CDEE92897AD4F00B0E5AA /* Main.storyboard */,
 				E78CDEEC2897AD6500B0E5AA /* Assets.xcassets */,
 				E78CDEEE2897AD6600B0E5AA /* LaunchScreen.storyboard */,
 				E78CDEF12897AD6600B0E5AA /* Info.plist */,
 				E78CDEF22897AD6600B0E5AA /* main.m */,
+				E73A7D842923A8B700B9A9B3 /* testPod-Bridging-Header.h */,
 			);
 			path = testPod;
 			sourceTree = "<group>";
@@ -192,6 +185,7 @@
 				TargetAttributes = {
 					E78CDEDC2897AD4F00B0E5AA = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1410;
 					};
 				};
 			};
@@ -262,6 +256,7 @@
 				E78CDF1D2897B85500B0E5AA /* MotivationVideoViewController.m in Sources */,
 				E78CDF252897B85500B0E5AA /* FeedAdViewController.m in Sources */,
 				E78CDF212897B85500B0E5AA /* PasterVideoViewController.m in Sources */,
+				E73A7D862923A8B700B9A9B3 /* File.swift in Sources */,
 				E78CDF222897B85500B0E5AA /* FullscreenVideoViewController.m in Sources */,
 				E78CDF202897B85500B0E5AA /* NativeExpressAdController.m in Sources */,
 				E78CDF172897B85500B0E5AA /* ViewController.m in Sources */,
@@ -409,10 +404,10 @@
 		};
 		E78CDEF72897AD6600B0E5AA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5CBB10831490D7A3015DBB5C /* Pods-testPod.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NN56R38BZT;
@@ -433,16 +428,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.medpro.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "testPod/testPod-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		E78CDEF82897AD6600B0E5AA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 387641F9B56EF8FB65DDCB1C /* Pods-testPod.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NN56R38BZT;
@@ -463,6 +461,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.medpro.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "testPod/testPod-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
