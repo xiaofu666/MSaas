@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "SFBaseAdManager.h"
+#import <MSaas/SFBaseAdManager.h>
 
 @class SFFeedAdData;
 

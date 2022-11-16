@@ -11,11 +11,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef enum : NSUInteger {
-    SFApiBidAD = 1,
-    SFSDKServerBidAD,
-    SFSDKBidAD,
-    SFSDKAD,
-    SFSDKBottomAD,
+    SFApiBidAD = 1,     //1、直客竞价
+    SFSDKServerBidAD,   //2、联盟服务端竞价
+    SFSDKBidAD,         //3、联盟SDK竞价
+    SFSDKAD,            //4、固价瀑布流
+    SFSDKBottomAD,      //5、联盟打底
 } SFADType;
 
 @interface SFAdSourcesModel : NSObject

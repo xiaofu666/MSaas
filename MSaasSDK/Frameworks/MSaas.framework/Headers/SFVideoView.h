@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) CMTime currentTime;
 @property (nonatomic, strong) AVPlayerItem *playItem;
 
+- (void)renderWirhVideo:(NSString *)videoUrl Image:(NSString *)imageUrl;
+
 @end
 
 NS_ASSUME_NONNULL_END

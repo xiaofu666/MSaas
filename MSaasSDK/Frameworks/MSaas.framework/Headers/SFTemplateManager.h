@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "SFBaseAdManager.h"
+#import <MSaas/SFBaseAdManager.h>
 
 NS_ASSUME_NONNULL_BEGIN
 @protocol SFTemplateDelegate <NSObject>
@@ -63,6 +63,10 @@ NS_ASSUME_NONNULL_BEGIN
  * 开发者需传入用来弹出目标页的ViewController，一般为当前ViewController
  */
 @property (nonatomic, weak) UIViewController *showAdController;
+/**
+ * 针对部分联盟广告主有效
+ */
+- (void)setBlackTheme:(BOOL)isBlack;
 
 //加载广告数据
 - (void)loadAdData;
