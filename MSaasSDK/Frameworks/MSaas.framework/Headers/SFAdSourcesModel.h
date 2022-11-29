@@ -69,6 +69,8 @@ typedef enum : NSUInteger {
 @property (nonatomic, copy) NSString *cid;
 //广告加载ID
 @property (nonatomic, copy) NSString *req_id;
+//层次ID
+@property (nonatomic, assign) NSInteger roundIndex;
 
 //自定义参数，json格式
 @property (nonatomic, copy) NSString *ext;

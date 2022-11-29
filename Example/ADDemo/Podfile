@@ -25,5 +25,7 @@ target 'testPod' do
   pod 'SFAdMtgAdapter'
   # 美数广告主适配包
   pod 'SFAdMsAdapter'
+  # Groomer广告主适配包
+  pod 'SFAdGroMoreAdapter'
 
 end

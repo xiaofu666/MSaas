@@ -20,6 +20,7 @@ typedef void(^ADSuccess)(SFAdSourcesModel *model);
 @property (nonatomic, strong) SFAdSourcesModel * _Nullable baseModel;
 
 @property (nonatomic, strong, nullable) SFLaunchView *yxADView;
+@property (nonatomic, strong, nullable) UIView *bottomView;
 @property (nonatomic, strong, nullable) SFInterstitialView *sf_InterstitialView;
 @property (nonatomic, strong) UIButton *closeBtn;
 @property (nonatomic, strong) SFSkipAdButton *skipButton;
@@ -40,6 +41,8 @@ typedef void(^ADSuccess)(SFAdSourcesModel *model);
 - (void)loadBiddingADWithModel:(SFAdSourcesModel *)model;
 //上报ECPM
 - (void)s2sBidECPMWithPrice:(NSString *)price;
+//个性化推荐广告设置  YES:关闭个性化推荐   NO:打开个性化推荐    默认为NO
++ (void)setPersonalizedState:(BOOL)state;
 
 //UIViewLayoutConstraintCreation
 - (void)sf_ViewAnchorWithView:(UIView *)view Top:(NSLayoutYAxisAnchor *)top Left:(NSLayoutXAxisAnchor *)left Bottom:(NSLayoutYAxisAnchor *)bottom Right:(NSLayoutXAxisAnchor *)right Padding:(UIEdgeInsets)padding Size:(CGSize)size;
