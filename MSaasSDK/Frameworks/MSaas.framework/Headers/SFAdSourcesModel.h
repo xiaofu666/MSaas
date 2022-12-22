@@ -71,6 +71,8 @@ typedef enum : NSUInteger {
 @property (nonatomic, copy) NSString *req_id;
 //层次ID
 @property (nonatomic, assign) NSInteger roundIndex;
+//是否上报填充
+@property (nonatomic) BOOL isTrafficResponse;
 
 //自定义参数，json格式
 @property (nonatomic, copy) NSString *ext;
