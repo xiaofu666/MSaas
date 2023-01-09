@@ -67,7 +67,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, assign) NSInteger duration DEPRECATED_MSG_ATTRIBUTE("已弃用，固定5秒");
 /**
- * 设置开屏广告的等待时间 default 3s
+ * 设置开屏广告的等待时间 default 5s
  */
 @property (nonatomic, assign) NSInteger waitDataDuration DEPRECATED_MSG_ATTRIBUTE("已弃用，后台配置");
 /**

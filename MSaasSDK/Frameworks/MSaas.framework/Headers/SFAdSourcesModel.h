@@ -73,6 +73,10 @@ typedef enum : NSUInteger {
 @property (nonatomic, assign) NSInteger roundIndex;
 //是否上报填充
 @property (nonatomic) BOOL isTrafficResponse;
+//是否是缓存展示，0=否，1=是
+@property (nonatomic, copy) NSString *is_cached;
+/** 是否需要开屏视频V+功能 */
+@property (nonatomic, assign) BOOL needZoomOut;
 
 //自定义参数，json格式
 @property (nonatomic, copy) NSString *ext;

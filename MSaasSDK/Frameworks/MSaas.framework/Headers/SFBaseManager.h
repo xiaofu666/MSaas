@@ -41,8 +41,8 @@ typedef void(^ADSuccess)(SFAdSourcesModel *model);
 - (void)loadBiddingADWithModel:(SFAdSourcesModel *)model;
 //上报ECPM
 - (void)s2sBidECPMWithPrice:(NSString *)price;
-//个性化推荐广告设置  YES:关闭个性化推荐   NO:打开个性化推荐    默认为NO
-+ (void)setPersonalizedState:(BOOL)state;
+//个性化推荐广告设置  1:关闭个性化推荐   0:打开个性化推荐    默认为0
++ (void)setPersonalizedState:(NSNumber *)state;
 
 //UIViewLayoutConstraintCreation
 - (void)sf_ViewAnchorWithView:(UIView *)view Top:(NSLayoutYAxisAnchor *)top Left:(NSLayoutXAxisAnchor *)left Bottom:(NSLayoutYAxisAnchor *)bottom Right:(NSLayoutXAxisAnchor *)right Padding:(UIEdgeInsets)padding Size:(CGSize)size;

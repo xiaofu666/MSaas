@@ -15,8 +15,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) id<WKScriptMessageHandler> scriptDelegate;
 
+@property (nonatomic, strong) NSMutableDictionary *registerDict;
+
++(instancetype)defaultManager;
+
 //注册APP id
 + (BOOL)registerAppId:(NSString *)appId;
++ (NSString *)appId;
 
 // 自定义配置用户分组信息
 + (void)setUserInfoForMap:(NSDictionary *)userInfo;

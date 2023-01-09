@@ -69,7 +69,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, copy) NSString *mediaId;
 /**
- * 广告数量,不传则后台控制
+ * 最多返回的广告数量
  */
 @property (nonatomic) NSInteger adCount;
 /**
