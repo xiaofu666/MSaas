@@ -71,8 +71,6 @@ typedef enum : NSUInteger {
 @property (nonatomic, copy) NSString *req_id;
 //层次ID
 @property (nonatomic, assign) NSInteger roundIndex;
-//是否上报填充
-@property (nonatomic) BOOL isTrafficResponse;
 //是否是缓存展示，0=否，1=是
 @property (nonatomic, copy) NSString *is_cached;
 /** 是否需要开屏视频V+功能 */

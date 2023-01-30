@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SFAdGromoreAdapter"
-  s.version      = "2.6.2" # 版本号
+  s.version      = "2.6.3" # 版本号
   s.summary      = "SFAdGroMoreAdapter is a AD SDK Adapter."
   s.description  = <<-DESC
                    ‘CloudDragonfly provides Union ADs which include native、banner、feed、splash、RewardVideo etc..’
@@ -24,6 +24,6 @@ Pod::Spec.new do |s|
   s.xcconfig = { "OTHER_LDFLAGS" => "-ObjC" }
   s.pod_target_xcconfig = { 'VALID_ARCHS[sdk=iphonesimulator*]' => '' }
 
-  s.dependency 'SFGroMoreSDK', '~>3.8.0.2'
+  s.dependency 'SFGroMoreSDK', '~>3.9.0.2'
   
 end

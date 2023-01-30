@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SFAdGdtAdapter"
-  s.version      = "2.6.2" # 版本号
+  s.version      = "2.6.3.1" # 版本号
   s.summary      = "SFAdGdtAdapter is a AD SDK Adapter."
   s.description  = <<-DESC
                    ‘CloudDragonfly provides Union ADs which include native、banner、feed、splash、RewardVideo etc..’
@@ -24,6 +24,6 @@ Pod::Spec.new do |s|
   s.xcconfig = { "OTHER_LDFLAGS" => "-ObjC" }
   s.pod_target_xcconfig = { 'VALID_ARCHS[sdk=iphonesimulator*]' => '' }
 
-  s.dependency 'GDTMobSDK', '~>4.14.02'
+  s.dependency 'GDTMobSDK', '~>4.14.10'
   
 end

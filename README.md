@@ -1,7 +1,7 @@
 # MSaas
 ***
 [![MSaas](https://img.shields.io/badge/MSaas-AD-red.svg)](https://github.com/xiaofu666/MSaas_SDK.git)
-[![Travis](https://img.shields.io/travis/xiaofu666/MSaas_SDK/tree/master/Example/YQAdDemo.svg?style=flat)](https://github.com/xiaofu666/MSaas_SDK.git)
+[![Travis](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/xiaofu666/MSaas_SDK.git)
 [![Language](https://img.shields.io/badge/Language-Objective--C-FF7F24.svg?style=flat)](https://github.com/xiaofu666/MSaas_SDK.git)
 [![CocoaPods](https://img.shields.io/cocoapods/p/MSaas.svg)](https://github.com/xiaofu666/MSaas_SDK.git)
 [![CocoaPods](https://img.shields.io/cocoapods/v/MSaas.svg)](https://github.com/xiaofu666/MSaas_SDK.git)
@@ -11,9 +11,9 @@
 
 ## 如何开始
 
-+ [下载 MSaas_SDK](https://github.com/xiaofu666/MSaas_SDK) 并使用附带的 [示例应用程序](https://github.com/xiaofu666/MSaas_SDK/tree/master/Example/ADDemo)
++ [下载 MSaas_SDK](https://codeload.github.com/xiaofu666/MSaas/zip/refs/heads/main) 并使用附带的 [示例应用程序](https://github.com/xiaofu666/MSaas/tree/main/Example/ADDemo)
 
-+ 查看 [文档](https://github.com/xiaofu666/MSaas_SDK/blob/master/MSaasSDK/Document/iOS-SDK-对接文档.html) 以全面了解MSaas_SDK中提供的所有API
++ 查看 [文档](https://github.com/xiaofu666/MSaas_SDK/Document/iOS-SDK-对接文档.html) 以全面了解MSaas_SDK中提供的所有API
 
 + 如果您还有其他问题，请联系我们运营
 
