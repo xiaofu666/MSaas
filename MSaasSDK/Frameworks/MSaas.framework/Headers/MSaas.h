@@ -32,4 +32,5 @@ FOUNDATION_EXPORT const unsigned char MSaasVersionString[];
 #import <MSaas/SFInterstitialView.h>
 #import <MSaas/SFSkipAdButton.h>
 #import <MSaas/SFVideoView.h>
+#import <MSaas/SFDrawVideoManager.h>
 #import <MSaas/SFDrawVideoAdView.h>

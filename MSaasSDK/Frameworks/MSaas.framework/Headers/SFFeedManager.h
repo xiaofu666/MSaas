@@ -64,10 +64,7 @@ NS_ASSUME_NONNULL_BEGIN
  * 广告回调的代理
  */
 @property(nonatomic, weak) id<SFFeedDelegate> delegate;
-/**
- * 获取广告的媒体位
- */
-@property (nonatomic, copy) NSString *mediaId;
+
 /**
  * 最多返回的广告数量
  */
@@ -77,8 +74,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, weak) UIViewController *showAdController;
 
-//加载广告数据
-- (void)loadAdData;
+
 
 /**
  绑定展示的图片视图和点击视图，行为由SDK控制

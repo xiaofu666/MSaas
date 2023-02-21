@@ -54,10 +54,7 @@ typedef enum {
  * 广告回调的代理
  */
 @property(nonatomic, weak) id<SFTemplateDelegate> delegate;
-/**
- * 获取广告的媒体位
- */
-@property (nonatomic, copy) NSString *mediaId;
+
 /**
  * 广告view大小尺寸,高度为0时，将自适应高度（推荐高度传0进行自适应高度）
  */
@@ -75,8 +72,7 @@ typedef enum {
  */
 @property (nonatomic, assign) SFTemplateExpressNativeTheme theme;
 
-//加载广告数据
-- (void)loadAdData;
+
 
 /// 自定义广告主时，需要进行注册
 /// @param adv_id 广告主在MedPro平台对应的adv_id

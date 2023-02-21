@@ -58,10 +58,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 /** 设置半屏广告的所含 logo 的 view  */
 @property (nonatomic, strong) UIView * _Nullable bottomView;
-/**
- * 获取广告的媒体位
- */
-@property (nonatomic, copy) NSString *mediaId;
+
 /**
  * 设置开屏广告的停留时间default 5s
  */
@@ -75,8 +72,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, weak) UIViewController *showAdController;
 
-//加载广告数据
-- (void)loadAdData;
+
 
 //展示开屏广告
 - (void)showSplashAdWithWindow:(UIWindow *)window;

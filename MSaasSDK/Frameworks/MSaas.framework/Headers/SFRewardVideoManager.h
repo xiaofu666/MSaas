@@ -55,15 +55,14 @@ NS_ASSUME_NONNULL_BEGIN
  * 广告回调的代理
  */
 @property (nonatomic, weak) id<SFRewardVideoDelegate> delegate;
-/**
- * 获取广告的媒体位
- */
-@property (nonatomic, copy) NSString *mediaId;
+
 
 /**
  * 用户ID，可选参数，服务端校验奖励时透传
  */
 @property (nonatomic, copy) NSString *userId;
+
+
 /**
  * 加载广告数据
  * @param extra 额外参数

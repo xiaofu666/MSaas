@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SFAdSigmobAdapter"
-  s.version      = "2.6.3" # 版本号
+  s.version      = "2.6.4" # 版本号
   s.summary      = "SFAdSigmobAdapter is a AD SDK Adapter."
   s.description  = <<-DESC
                    ‘CloudDragonfly provides Union ADs which include native、banner、feed、splash、RewardVideo etc..’
@@ -24,6 +24,6 @@ Pod::Spec.new do |s|
   s.xcconfig = { "OTHER_LDFLAGS" => "-ObjC" }
   s.pod_target_xcconfig = { 'VALID_ARCHS[sdk=iphonesimulator*]' => '' }
 
-  s.dependency 'SigmobAd-iOS', '~>4.6.0'
+  s.dependency 'SigmobAd-iOS', '~>4.6.1'
   
 end

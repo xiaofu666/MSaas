@@ -47,10 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
  * 广告回调的代理
  */
 @property(nonatomic, weak) id<SFBannerDelegate> delegate;
-/**
- * 获取广告的媒体位
- */
-@property (nonatomic, copy) NSString *mediaId;
+
 /**
  * 是否轮播。 若要开启轮播。 时间选择为30-120s之间。若不符合 则不轮播 （默认30秒自动轮播）
  */
@@ -66,8 +63,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) UIViewController *showAdController;
 
-//加载广告数据
-- (void)loadAdData;
+
 
 //展示横幅广告  传入承载广告的
 - (void)showBannerAdWithView:(UIView *)view;
