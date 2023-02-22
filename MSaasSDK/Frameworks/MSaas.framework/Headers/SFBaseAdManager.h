@@ -43,8 +43,6 @@ NS_ASSUME_NONNULL_BEGIN
  * 获取广告的媒体位
  */
 @property (nonatomic, copy) NSString *mediaId;
-//预加载
-@property (nonatomic) BOOL preload;
 
 //加载广告数据
 - (void)loadAdData;

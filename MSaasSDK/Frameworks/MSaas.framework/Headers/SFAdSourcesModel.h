@@ -85,6 +85,10 @@ typedef enum : NSUInteger {
 @property (nonatomic, copy) NSString *adapter_class;
 //是否是预加载
 @property (nonatomic, assign) BOOL is_proload;
+//uniqueID
+@property (nonatomic, copy) NSString *uniqueID;
+//trackID
+@property (nonatomic, copy) NSString *trackID;
 
 /*  以下参数为block回调  */
 //1：素材加载成功  2：素材加载失败  3：点击  4：从落地页返回  5：广告关闭 6：素材成功展示 7：激励视频获得奖励回调  8：素材渲染成功   9：视频播放状态改变
