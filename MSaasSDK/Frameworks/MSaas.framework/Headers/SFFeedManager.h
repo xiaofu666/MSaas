@@ -17,12 +17,14 @@
  *  播放器只可能处于以下状态中的一种
  */
 typedef NS_ENUM(NSUInteger, SFMediaPlayerStatus) {
-    SFMediaPlayerStatusInitial = 0,         // 初始状态
-    SFMediaPlayerStatusLoading = 1,         // 加载中
-    SFMediaPlayerStatusStarted = 2,         // 开始播放
-    SFMediaPlayerStatusPaused = 3,          // 用户行为导致暂停
-    SFMediaPlayerStatusError = 4,           // 播放出错
-    SFMediaPlayerStatusStoped = 5,          // 播放停止
+    SFMediaPlayerStatusInitial      = 0,    // 初始状态
+    SFMediaPlayerStatusLoading      = 1,    // 加载中
+    SFMediaPlayerStatusStarted      = 2,    // 开始播放
+    SFMediaPlayerStatusPaused       = 3,    // 用户行为导致暂停
+    SFMediaPlayerStatusError        = 4,    // 播放出错
+    SFMediaPlayerStatusStoped       = 5,    // 播放停止
+    SFMediaPlayerStatusPlaying      = 6,    // 播放中
+    SFMediaPlayerStatusWillStart    = 10,   // 即将播放
 };
 
 NS_ASSUME_NONNULL_BEGIN
@@ -66,7 +68,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, weak) id<SFFeedDelegate> delegate;
 
 /**
- * 最多返回的广告数量
+ * 最多返回的广告数量 ,默认为1
  */
 @property (nonatomic) NSInteger adCount;
 /**

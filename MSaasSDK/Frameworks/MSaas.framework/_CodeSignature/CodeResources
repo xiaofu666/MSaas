@@ -38,11 +38,11 @@
 		</data>
 		<key>Headers/SFFeedAdData.h</key>
 		<data>
-		lm2W2XfUfNnZ24Vm+1e+TOJ0/f8=
+		aqp0Hftz5b+Iu2CCqMznd6mZf2M=
 		</data>
 		<key>Headers/SFFeedManager.h</key>
 		<data>
-		GESGN/vfn2qjZHXKetuIFP/ydTs=
+		6Zie2s2ys215chzFJSd8++IlaWI=
 		</data>
 		<key>Headers/SFFocusImage.h</key>
 		<data>
@@ -86,7 +86,7 @@
 		</data>
 		<key>Headers/SFVideoView.h</key>
 		<data>
-		8DGgAvw0fcZHrzWDKWAKPpkmJ9M=
+		ejfVOG8ORoVj5xgFkxcgsgXC2Mg=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -191,22 +191,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			lm2W2XfUfNnZ24Vm+1e+TOJ0/f8=
+			aqp0Hftz5b+Iu2CCqMznd6mZf2M=
 			</data>
 			<key>hash2</key>
 			<data>
-			DFiN/HuJlsdDaWKffIuMv8+Vet3h45oCtezsPPup+F8=
+			2iQ5pRIN8UIp7hsrdKcy6ou45Ozq6FmV+PddtRAgcfw=
 			</data>
 		</dict>
 		<key>Headers/SFFeedManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			GESGN/vfn2qjZHXKetuIFP/ydTs=
+			6Zie2s2ys215chzFJSd8++IlaWI=
 			</data>
 			<key>hash2</key>
 			<data>
-			Z8Gxy6qdLG0kyjjhbIcTLnk34u5ScVwGPHSdXDGVGzY=
+			YmQ01Q2Oe8v98tT+A5927Dp1gOcjxKqKNhCQnQsTDBo=
 			</data>
 		</dict>
 		<key>Headers/SFFocusImage.h</key>
@@ -323,11 +323,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8DGgAvw0fcZHrzWDKWAKPpkmJ9M=
+			ejfVOG8ORoVj5xgFkxcgsgXC2Mg=
 			</data>
 			<key>hash2</key>
 			<data>
-			X2c4W/qzMux3EfFSS1ntqoWZmPKmrsGpvMws4MVKKcM=
+			tGGqj/3TyDHUsQfoJLXCN5HWEjOae10uPr48iEojSKk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
