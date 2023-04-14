@@ -68,13 +68,15 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, weak) id<SFFeedDelegate> delegate;
 
 /**
- * 最多返回的广告数量 ,默认为1
- */
-@property (nonatomic) NSInteger adCount;
-/**
  * 开发者需传入用来弹出目标页的ViewController，一般为当前ViewController
  */
 @property (nonatomic, weak) UIViewController *showAdController;
+
+/**
+ * 最多返回的广告数量 ,默认为1
+ */
+@property (nonatomic) NSInteger adCount;
+
 
 
 

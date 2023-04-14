@@ -72,9 +72,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, weak) UIViewController *showAdController;
 
+// 发起广告请求并展示在Window中
+- (void)loadAndShowSplashAdWithWindow:(UIWindow *)window;
 
-
-//展示开屏广告
+// 展示开屏广告,在广告成功回调 - (void)splashAdDidLoad; 中调用
 - (void)showSplashAdWithWindow:(UIWindow *)window;
 
 

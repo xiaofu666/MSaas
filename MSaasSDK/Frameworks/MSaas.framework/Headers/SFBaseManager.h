@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 #import <StoreKit/StoreKit.h>
 
-@class SFFeedAdData,SFAdSourcesModel,SFConfigModelAdplace,SFLaunchView,SFFullscreenVideoAdd,SFSkipAdButton,SFInterstitialView;
+@class SFFeedAdData,SFAdSourcesModel,SFConfigModelAdplace,SFLaunchView,SFFullscreenVideoAdd,SFSkipAdButton,SFInterstitialView,SFBannerView;
 NS_ASSUME_NONNULL_BEGIN
 
 typedef void(^ADSuccess)(SFAdSourcesModel *model);
@@ -22,6 +22,7 @@ typedef void(^ADSuccess)(SFAdSourcesModel *model);
 @property (nonatomic, strong, nullable) SFLaunchView *yxADView;
 @property (nonatomic, strong, nullable) UIView *bottomView;
 @property (nonatomic, strong, nullable) SFInterstitialView *sf_InterstitialView;
+@property (nonatomic, strong, nullable) SFBannerView *sf_bannerView;
 @property (nonatomic, strong) UIButton *closeBtn;
 @property (nonatomic, strong) SFSkipAdButton *skipButton;
 

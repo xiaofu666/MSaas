@@ -19,7 +19,7 @@
 @interface SFFeedAdData : NSObject
 
 /**
- * 是否由SDK渲染图片，默认为NO
+ * 是否由SDK渲染图片，默认为NO，注册点击事件之前赋值更改
  */
 @property (nonatomic) BOOL isRenderImage;
 
