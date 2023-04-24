@@ -7,11 +7,10 @@
 //
 
 #import "FeedAdViewController.h"
-#import "ADInfo.h"
+#import "ADTableViewCell.h"
 
-@interface FeedAdViewController () <SFFeedDelegate ,UITableViewDelegate,UITableViewDataSource>
+@interface FeedAdViewController () <UITableViewDelegate,UITableViewDataSource>
 
-@property (nonatomic,strong) SFFeedManager *feedManager;
 @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,strong) NSMutableArray *dataSource;
 
@@ -25,20 +24,15 @@
     self.title = @"原生自渲染广告";
     
     self.dataSource = [[NSMutableArray alloc]initWithCapacity:0];
-    for (int i = 0; i < 20; i ++ ) {
-        NSString * title = [NSString stringWithFormat:@"Number:%d  测试数据",i];
+    for (int i = 0; i < 10; i ++ ) {
+        NSString *title = [NSString stringWithFormat:@"Number:%d  点击插入广告",i];
         [self.dataSource addObject:title];
     }
     [self.view addSubview:self.tableView];
     
-    self.feedManager = [[SFFeedManager alloc] init];
-    self.feedManager.mediaId = feed_id;
-    self.feedManager.adCount = 3;
-    self.feedManager.showAdController = self;
-    self.feedManager.delegate = self;
-    [self.feedManager loadAdData];
-    
     // Do any additional setup after loading the view.
+    NSLog(@"开始广告请求");
+    [self insertAdView:0];
 }
 
 - (UITableView *)tableView{
@@ -54,17 +48,13 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.dataSource.count;
-}
+}   
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     id model = self.dataSource[indexPath.row];
-    if ([model isKindOfClass:[SFFeedAdData class]]) {
-        SFFeedAdData *adData = model;
-        ADTableViewCell *adcell = [tableView dequeueReusableCellWithIdentifier:@"ADTableViewCellID" forIndexPath:indexPath];
-        adcell.adContentLabel.text = adData.adContent;
-        adcell.adTitleLabel.text = adData.adTitle;
-        [adcell.infoBtn setTitle:adData.buttonText?:@"查看详情" forState:UIControlStateNormal];
-        [self.feedManager registerAdViewForBindImage:adcell.adImageView adData:adData clickableViews:@[adcell.adContentLabel,adcell.adImageView,adcell.adTitleLabel,adcell.infoBtn]];
-        return adcell;
+    if ([model isKindOfClass:[ADTableViewCell class]]) {
+        ADTableViewCell *cell = (ADTableViewCell *)model;
+        [cell registerAdView];
+        return cell;
     }else{
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID"];
         if (!cell) {
@@ -76,8 +66,9 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     id model = self.dataSource[indexPath.row];
-    if ([model isKindOfClass:[SFFeedAdData class]]) {
-        return 270;
+    if ([model isKindOfClass:[ADTableViewCell class]]) {
+        // 按照图片 宽:高 = 16:9适配
+        return 90 + (UIScreen.mainScreen.bounds.size.width - 30) * 9 / 16;
     }else{
         return 80;
     }
@@ -85,42 +76,25 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
-
-#pragma mark FeedAd delegate
-/**
- * 广告数据：加载成功
- */
-- (void)feedAdDidLoadDatas:(NSArray<__kindof SFFeedAdData *> *)datas{
-    NSLog(@"原生信息流广告：加载成功");
-    NSMutableArray *dataSources = [self.dataSource mutableCopy];
-    if (datas.count > 0) {
-        for (SFFeedAdData *adData in datas) {
-            uint32_t index = arc4random_uniform((uint32_t)self.dataSource.count);
-            [dataSources insertObject:adData atIndex:index];
-        }
-        self.dataSource = [dataSources mutableCopy];
-        [self.tableView reloadData];
+    id model = self.dataSource[indexPath.row];
+    if (![model isKindOfClass:[ADTableViewCell class]]) {
+        NSLog(@"tableView cell 被点击");
+        [self insertAdView:indexPath.row];
     }
 }
-/**
- * 广告数据：加载失败
- * @param error : 错误信息
- */
-- (void)feedAdDidFailed:(NSError *)error{
-    NSLog(@"原生信息流广告：加载失败 error = %@",error);
+
+- (void)insertAdView:(NSInteger)index{
+    [self.dataSource insertObject:[self adTableViewCell] atIndex:index];
 }
-/**
- * 广告视图：点击
- */
-- (void)feedAdDidClicked{
-    NSLog(@"原生信息流广告：点击");
-}
-/**
- * 落地页或者appstoe返回事件
- */
-- (void)feedAdDidCloseOtherController{
-    NSLog(@"原生信息流广告：落地页或者appstoe返回事件");
+
+- (ADTableViewCell *)adTableViewCell{
+    ADTableViewCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"ADTableViewCell" owner:nil options:nil] firstObject];
+    cell.showAdController = self;
+    __weak typeof(self) weakSelf= self;
+    cell.successBlock = ^{
+        [weakSelf.tableView reloadData];
+    };
+    return cell;
 }
 
 - (void)didReceiveMemoryWarning {

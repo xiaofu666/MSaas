@@ -2,10 +2,10 @@
 Pod::Spec.new do |s|
 
   s.name         = "MSaas"
-  s.version      = "2.6.6.2" # 版本号
-  s.summary      = "MSaas is a SDK from CloudDragonfly providing union AD service."
+  s.version      = "2.6.8" # 版本号
+  s.summary      = "MSaas is a SDK from Mediatom providing union AD service."
   s.description  = <<-DESC
-                   ‘CloudDragonfly provides Union ADs which include native、banner、feed、splash、RewardVideo etc..’
+                   ‘Mediatom provides Union ADs which include native、banner、feed、splash、RewardVideo etc..’
                    DESC
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "小富" => "3290235031@qq.com" }

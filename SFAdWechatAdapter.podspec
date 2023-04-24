@@ -2,10 +2,10 @@
 Pod::Spec.new do |s|
 
   s.name         = "SFWechatMiniAppAdapter"
-  s.version      = "2.6.6" # 版本号
+  s.version      = "2.6.8" # 版本号
   s.summary      = "SFWechatMiniAppAdapter is a AD SDK Adapter."
   s.description  = <<-DESC
-                   ‘CloudDragonfly provides Union ADs which include miniAPP etc..’
+                   ‘Mediatom provides Union ADs which include miniAPP etc..’
                    DESC
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "小富" => "3290235031@qq.com" }

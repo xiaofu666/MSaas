@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/MSaas.h</key>
 		<data>
-		wsr1B75WsNXeQk2AGJywAov1zo8=
+		wNqTO27O/Z8qEuvtyUxlElHptME=
 		</data>
 		<key>Headers/SFAdSDKManager.h</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Headers/SFBaseAdManager.h</key>
 		<data>
-		S0l3fZRZ+G8sUH6HoX6ey9Y2svc=
+		RuDCZCSJ3MQPhBK52YouPJ+ajfo=
 		</data>
 		<key>Headers/SFBaseManager.h</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Headers/SFDrawVideoAdView.h</key>
 		<data>
-		jTIY2vrbI7dBLHdawff7IAU2reY=
+		vzNbSN2siM6QlNQRnUsZNmpJFq0=
 		</data>
 		<key>Headers/SFDrawVideoManager.h</key>
 		<data>
@@ -42,11 +42,11 @@
 		</data>
 		<key>Headers/SFFeedAdData.h</key>
 		<data>
-		nPdmya2Xh0bACejKETGVb8yWcWI=
+		zkbpcl5J4P2bMjFQNnJDJQuzKzU=
 		</data>
 		<key>Headers/SFFeedManager.h</key>
 		<data>
-		BIWMaaYvSGaJeYSfTHqWrUijcys=
+		7hav99+e0r+zlpucDfxKdkN9jHE=
 		</data>
 		<key>Headers/SFFocusImage.h</key>
 		<data>
@@ -55,10 +55,6 @@
 		<key>Headers/SFFullscreenVideoManager.h</key>
 		<data>
 		Q14PKFoXhnlGTmf3OXPYuLvNI7k=
-		</data>
-		<key>Headers/SFImgUtil.h</key>
-		<data>
-		OmCssreDZLSx8XnBMGl0jNd+bSE=
 		</data>
 		<key>Headers/SFInterstitialManager.h</key>
 		<data>
@@ -90,11 +86,15 @@
 		</data>
 		<key>Headers/SFVideoView.h</key>
 		<data>
-		ejfVOG8ORoVj5xgFkxcgsgXC2Mg=
+		WdGmRLVS3JGK9SnEkJxUpeOmg1s=
+		</data>
+		<key>Headers/UIImageView+SFAdd.h</key>
+		<data>
+		pBlaDIEVkHpCsR3AClzRl60U6p0=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		YQpwDI7UZj3Ps73jZLsUNYJ1zBw=
+		/ngCbCGktV9mSF5I46oVZDCIkYM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -107,11 +107,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			wsr1B75WsNXeQk2AGJywAov1zo8=
+			wNqTO27O/Z8qEuvtyUxlElHptME=
 			</data>
 			<key>hash2</key>
 			<data>
-			GIxMM9y4gETsW82gdIm7y9Zu4kjBQ6O85IJrvDt6ZZc=
+			b9/vgdNW0i59Pzh4jMfBwQjoQaMVkWqv2PPmXqhlpPw=
 			</data>
 		</dict>
 		<key>Headers/SFAdSDKManager.h</key>
@@ -162,11 +162,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			S0l3fZRZ+G8sUH6HoX6ey9Y2svc=
+			RuDCZCSJ3MQPhBK52YouPJ+ajfo=
 			</data>
 			<key>hash2</key>
 			<data>
-			vwekadgZYimwR/hHyDy3oYB4fkhxXls2DAHNAeiwF5s=
+			a9Xzq6hgT35SYKH5Lkz69rGII6k3blyMlWHIpkQ7kqQ=
 			</data>
 		</dict>
 		<key>Headers/SFBaseManager.h</key>
@@ -184,11 +184,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			jTIY2vrbI7dBLHdawff7IAU2reY=
+			vzNbSN2siM6QlNQRnUsZNmpJFq0=
 			</data>
 			<key>hash2</key>
 			<data>
-			d8jz9sTOSLVbxLM6s9CnAvvX2Oo4ZNuCw20EHxseNRI=
+			Css5uV2an2rxWDeUlIDpmQ9CrRJCumoFpkFA1AN/U9M=
 			</data>
 		</dict>
 		<key>Headers/SFDrawVideoManager.h</key>
@@ -206,22 +206,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nPdmya2Xh0bACejKETGVb8yWcWI=
+			zkbpcl5J4P2bMjFQNnJDJQuzKzU=
 			</data>
 			<key>hash2</key>
 			<data>
-			RU5p4dpJgMfAbSr50aafh6FFBE5s9yNpGQYneI/sDm0=
+			pPxUDbqlbq8jqll4vex3SvEtTQtev9QuLixGqUh0KZw=
 			</data>
 		</dict>
 		<key>Headers/SFFeedManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BIWMaaYvSGaJeYSfTHqWrUijcys=
+			7hav99+e0r+zlpucDfxKdkN9jHE=
 			</data>
 			<key>hash2</key>
 			<data>
-			emBbLAguDPibA4Km50IO+5+rvQLDMCuSFPptbQvbEQ8=
+			oBBL+y6OHeULn/c3xwSMNfrFfAv1gsI+x+hm3g3zraw=
 			</data>
 		</dict>
 		<key>Headers/SFFocusImage.h</key>
@@ -244,17 +244,6 @@
 			<key>hash2</key>
 			<data>
 			6Xu2CtTOJ8Ggo4GdFG1X5JL3RnKQe+a8NmytUgU59k8=
-			</data>
-		</dict>
-		<key>Headers/SFImgUtil.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			OmCssreDZLSx8XnBMGl0jNd+bSE=
-			</data>
-			<key>hash2</key>
-			<data>
-			G6WzGqyMXpq8WIUK3bjTC27yvQKmungoBOF6vVrnKQM=
 			</data>
 		</dict>
 		<key>Headers/SFInterstitialManager.h</key>
@@ -338,11 +327,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ejfVOG8ORoVj5xgFkxcgsgXC2Mg=
+			WdGmRLVS3JGK9SnEkJxUpeOmg1s=
 			</data>
 			<key>hash2</key>
 			<data>
-			tGGqj/3TyDHUsQfoJLXCN5HWEjOae10uPr48iEojSKk=
+			FusyLpjd+5vtcia6cHpWH2T/Q3av+nCcTz7DppmKevY=
+			</data>
+		</dict>
+		<key>Headers/UIImageView+SFAdd.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			pBlaDIEVkHpCsR3AClzRl60U6p0=
+			</data>
+			<key>hash2</key>
+			<data>
+			QscaIKuh9iyc36/lsVIGI125APo0qtWSA9lJOYtxSh8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

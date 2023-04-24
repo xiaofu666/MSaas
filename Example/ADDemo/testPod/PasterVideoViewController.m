@@ -24,12 +24,33 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"贴片广告";
-    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(50, 200, [UIScreen mainScreen].bounds.size.width - 100 , 40)];
+    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(50, 150, [UIScreen mainScreen].bounds.size.width - 100 , 40)];
     button.backgroundColor = [UIColor blueColor];
     [button setTitle:@"贴片广告" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(loadAd) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
     // Do any additional setup after loading the view.
+    UIButton *playbtn = ({
+        UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(50, 200, [UIScreen mainScreen].bounds.size.width - 100 , 40)];
+        button.backgroundColor = [UIColor blueColor];
+        [button setTitle:@"播放控制(默认自动播放)" forState:UIControlStateNormal];
+        button.selected = YES;
+        button.tag = 111;
+        [button addTarget:self action:@selector(playEnableWithSender:) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    });
+    [self.view addSubview:playbtn];
+    
+    UIButton *mutebtn = ({
+        UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(50, 250, [UIScreen mainScreen].bounds.size.width - 100 , 40)];
+        button.backgroundColor = [UIColor blueColor];
+        [button setTitle:@"声音控制(默认视频静音)" forState:UIControlStateNormal];
+        button.selected = YES;
+        button.tag = 222;
+        [button addTarget:self action:@selector(muteEnableWithSender:) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    });
+    [self.view addSubview:mutebtn];
     
     UIButton *removebtn = ({
         UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(50, 300, [UIScreen mainScreen].bounds.size.width - 100 , 40)];
@@ -62,7 +83,38 @@
     }
     if (_videoView) {
         [_videoView removeFromSuperview];
+        _videoView = nil;
     }
+    //默认播放
+    UIButton *playButton = [self.view viewWithTag:111];
+    playButton.selected = YES;
+    [playButton setTitle:[NSString stringWithFormat:@"播放控制(播放)"] forState:UIControlStateNormal];
+    //默认静音
+    UIButton *muteButton = [self.view viewWithTag:222];
+    muteButton.selected = YES;
+    [muteButton setTitle:[NSString stringWithFormat:@"声音控制(静音)"] forState:UIControlStateNormal];
+}
+- (void)muteEnableWithSender:(UIButton *)sender{
+    sender.selected = !sender.selected;
+    if (sender.selected) {
+        [sender setTitle:[NSString stringWithFormat:@"声音控制(静音)"] forState:UIControlStateNormal];
+    } else {
+        [sender setTitle:[NSString stringWithFormat:@"声音控制(有声)"] forState:UIControlStateNormal];
+    }
+    //声音控制 MSaasGdtEnableSwitchKey：YES：静音； NO：有声
+    [[NSNotificationCenter defaultCenter] postNotificationName:MSaasGdtMuteEnable object:nil userInfo:@{MSaasGdtEnableSwitchKey:@(sender.selected)}];
+}
+- (void)playEnableWithSender:(UIButton *)sender{
+    sender.selected = !sender.selected;
+    if (sender.selected) {
+        [sender setTitle:[NSString stringWithFormat:@"播放控制(播放)"] forState:UIControlStateNormal];
+        self.timer.fireDate = [NSDate distantPast];
+    } else {
+        [sender setTitle:[NSString stringWithFormat:@"播放控制(暂停)"] forState:UIControlStateNormal];
+        self.timer.fireDate = [NSDate distantFuture];
+    }
+    //播放控制 MSaasGdtEnableSwitchKey：YES：播放； NO：暂停
+    [[NSNotificationCenter defaultCenter] postNotificationName:MSaasGdtPlayEnable object:nil userInfo:@{MSaasGdtEnableSwitchKey:@(sender.selected)}];
 }
 
 #pragma mark FeedAd delegate
@@ -75,9 +127,10 @@
         SFFeedAdData *model = datas.firstObject;
         NSLog(@"视频时长：%f",model.videoDuration);
         self.videoDuration = model.videoDuration;
-        [self.feedManager registerAdViewForBindImage:self.videoView adData:model clickableViews:@[self.videoView]];
         [self.view addSubview:self.videoView];
         [self.videoView addSubview:self.timeView];
+        model.isRenderImage = YES;
+        [self.feedManager registerAdViewForBindImage:self.videoView adData:model clickableViews:@[self.videoView]];
         
         //倒计时
         if (@available(iOS 10.0, *)) {
@@ -87,9 +140,8 @@
                 NSLog(@"视频倒计时：%f",self.videoDuration);
                 weakSelf.timeView.text = [NSString stringWithFormat:@"%.0f 秒",weakSelf.videoDuration];
                 if (weakSelf.videoDuration <= 0) {
-                    [weakSelf.videoView removeFromSuperview];
-                    weakSelf.videoView = nil;
-                    [timer invalidate];
+                    [weakSelf removeVideoView];
+                    NSLog(@"贴片视频广告播放结束");
                 }
                 weakSelf.videoDuration -= 1;
             }];

@@ -2,10 +2,10 @@
 Pod::Spec.new do |s|
 
   s.name         = "SFAdJztAdapter"
-  s.version      = "2.6.6" # 版本号
+  s.version      = "2.6.8" # 版本号
   s.summary      = "SFAdJztAdapter is a AD SDK Adapter."
   s.description  = <<-DESC
-                   ‘CloudDragonfly provides Union ADs which include native、banner、feed、splash、RewardVideo etc..’
+                   ‘Mediatom provides Union ADs which include native、banner、feed、splash、RewardVideo etc..’
                    DESC
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "小富" => "3290235031@qq.com" }
@@ -24,6 +24,6 @@ Pod::Spec.new do |s|
   s.xcconfig = { "OTHER_LDFLAGS" => "-ObjC" }
   s.pod_target_xcconfig = { 'VALID_ARCHS[sdk=iphonesimulator*]' => '' }
 
-  s.dependency 'JADYun', '~>2.2.2'
+  s.dependency 'JADYun', '~>2.2.8'
   
 end

@@ -35,7 +35,7 @@
 }
 - (void)halfLaunchScreenBtnClicked:(UIButton*)sender
 {
-    UILabel *bottom = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height * 0.2)];
+    UILabel *bottom = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 125)];
     bottom.text = @"AD Demo";
     bottom.textAlignment = NSTextAlignmentCenter;
     bottom.font = [UIFont systemFontOfSize:35];

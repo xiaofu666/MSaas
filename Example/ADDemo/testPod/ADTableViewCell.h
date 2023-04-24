@@ -16,8 +16,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *adTitleLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *adImageView;
 @property (weak, nonatomic) IBOutlet UILabel *adContentLabel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *adLogoW;
 
 @property (weak, nonatomic) IBOutlet UIButton *infoBtn;
+
+@property (nonatomic, weak) UIViewController *showAdController;
+@property (nonatomic, copy) void(^successBlock)(void);
+
+- (void)registerAdView;
 
 @end
 

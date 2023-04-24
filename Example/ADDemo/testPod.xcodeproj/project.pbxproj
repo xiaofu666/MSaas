@@ -20,7 +20,6 @@
 		E78CDF1B2897B85500B0E5AA /* HalfLaunchScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E78CDEFD2897B85400B0E5AA /* HalfLaunchScreenViewController.m */; };
 		E78CDF1C2897B85500B0E5AA /* LaunchScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E78CDF002897B85400B0E5AA /* LaunchScreenViewController.m */; };
 		E78CDF1D2897B85500B0E5AA /* MotivationVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E78CDF032897B85400B0E5AA /* MotivationVideoViewController.m */; };
-		E78CDF1E2897B85500B0E5AA /* SFImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E78CDF052897B85400B0E5AA /* SFImageView.m */; };
 		E78CDF1F2897B85500B0E5AA /* ADTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E78CDF062897B85400B0E5AA /* ADTableViewCell.m */; };
 		E78CDF202897B85500B0E5AA /* NativeExpressAdController.m in Sources */ = {isa = PBXBuildFile; fileRef = E78CDF072897B85400B0E5AA /* NativeExpressAdController.m */; };
 		E78CDF212897B85500B0E5AA /* PasterVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E78CDF082897B85400B0E5AA /* PasterVideoViewController.m */; };
@@ -51,8 +50,6 @@
 		E78CDF012897B85400B0E5AA /* PasterVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasterVideoViewController.h; sourceTree = "<group>"; };
 		E78CDF022897B85400B0E5AA /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E78CDF032897B85400B0E5AA /* MotivationVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MotivationVideoViewController.m; sourceTree = "<group>"; };
-		E78CDF042897B85400B0E5AA /* SFImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFImageView.h; sourceTree = "<group>"; };
-		E78CDF052897B85400B0E5AA /* SFImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFImageView.m; sourceTree = "<group>"; };
 		E78CDF062897B85400B0E5AA /* ADTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADTableViewCell.m; sourceTree = "<group>"; };
 		E78CDF072897B85400B0E5AA /* NativeExpressAdController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeExpressAdController.m; sourceTree = "<group>"; };
 		E78CDF082897B85400B0E5AA /* PasterVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasterVideoViewController.m; sourceTree = "<group>"; };
@@ -137,8 +134,6 @@
 				E78CDF082897B85400B0E5AA /* PasterVideoViewController.m */,
 				E78CDEFE2897B85400B0E5AA /* IDFAViewController.h */,
 				E78CDF0B2897B85400B0E5AA /* IDFAViewController.m */,
-				E78CDF042897B85400B0E5AA /* SFImageView.h */,
-				E78CDF052897B85400B0E5AA /* SFImageView.m */,
 				E78CDF092897B85400B0E5AA /* ADTableViewCell.h */,
 				E78CDF062897B85400B0E5AA /* ADTableViewCell.m */,
 				E78CDF0F2897B85500B0E5AA /* ADTableViewCell.xib */,
@@ -264,7 +259,6 @@
 				E78CDF232897B85500B0E5AA /* IDFAViewController.m in Sources */,
 				E78CDEF32897AD6600B0E5AA /* main.m in Sources */,
 				E78CDF1F2897B85500B0E5AA /* ADTableViewCell.m in Sources */,
-				E78CDF1E2897B85500B0E5AA /* SFImageView.m in Sources */,
 				E78CDF1B2897B85500B0E5AA /* HalfLaunchScreenViewController.m in Sources */,
 				E78CDF1A2897B85500B0E5AA /* BannerViewController.m in Sources */,
 			);

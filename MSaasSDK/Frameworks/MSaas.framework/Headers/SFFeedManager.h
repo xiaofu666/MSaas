@@ -77,15 +77,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic) NSInteger adCount;
 
-
-
-
 /**
  绑定展示的图片视图和点击视图，行为由SDK控制
  @param view 展示的图片视图
  @param adData 广告数据
  @param views 可点击的视图
  */
+// !!!:  必须在确保视图成功显示在屏幕上之后再调用注册点击，确保广告进行有效曝光
 - (void)registerAdViewForBindImage:(UIImageView *)view adData:(SFFeedAdData *)adData clickableViews:( NSArray<__kindof UIView *> *)views;
 
 /// 自定义广告主时，需要进行注册

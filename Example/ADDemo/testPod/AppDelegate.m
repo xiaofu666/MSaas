@@ -28,7 +28,7 @@
     
     [SFAdSDKManager registerAppId:app_id];
     
-    [self requestIDFA];
+    [self performSelector:@selector(requestIDFA) withObject:nil afterDelay:0.1];
     return YES;
 }
 
@@ -40,6 +40,7 @@
        }];
    } else {
        // Fallback on earlier versions
+       [self loadSplashAd];
    }
 }
 - (void)loadSplashAd{

@@ -19,12 +19,12 @@
 @interface SFFeedAdData : NSObject
 
 /**
- * 是否由SDK渲染图片，默认为NO，注册点击事件之前赋值更改
+ * 是否由SDK渲染图片，默认为NO，如想让SDK渲染，注册点击事件之前赋值更改为YES，
  */
 @property (nonatomic) BOOL isRenderImage;
 
 /**
- * 大图Url，可能为空
+ * 大图Url，可能为空，不能以次区分视频和照片素材，视频可能也会有封面素材图，使用 isVideoAd 区分是否是视频素材
  */
 @property (nonatomic, copy, nullable) NSString *imageUrl;
 
@@ -70,7 +70,7 @@
 @property (nonatomic, copy, nullable) NSString *buttonText;
 
 /**
- * 广告类型
+ * 广告主类型
  */
 @property (nonatomic, assign) NSInteger adType;
 
@@ -85,19 +85,19 @@
 @property (nonatomic, copy, nullable) NSString *adOriginName;
 
 /**
- * 是否自定义视频播放器，注册点击事件之前赋值
+ * 是否自定义视频播放器，注册点击事件之前赋值，默认由SDK去渲染视频广告
  */
 @property (nonatomic) BOOL isCustomRender;
-
-/**
- * 视频广告Url，可能为空，为空时，由SDK去渲染视频广告
- */
-@property (nonatomic, copy, nullable) NSString *videoUrl;
 
 /**
  * 是否为视频广告
  */
 @property (nonatomic) BOOL isVideoAd;
+
+/**
+ * 视频广告Url，可能为空
+ */
+@property (nonatomic, copy, nullable) NSString *videoUrl;
 
 /**
  * 视频广告时长

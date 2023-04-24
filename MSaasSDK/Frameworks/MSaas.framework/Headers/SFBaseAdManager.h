@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SFADInfo : NSObject
 
-/// 广告主名称
+// 广告主名称
 @property (nonatomic, copy) NSString *adnName;
 
 // 广告主APPID

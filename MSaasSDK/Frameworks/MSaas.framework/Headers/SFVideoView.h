@@ -30,6 +30,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)renderWirhVideo:(NSString *)videoUrl Image:(NSString *)imageUrl;
 
+- (void)replay;
+
 @end
 
 NS_ASSUME_NONNULL_END

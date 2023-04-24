@@ -26,7 +26,7 @@ FOUNDATION_EXPORT const unsigned char MSaasVersionString[];
 #import <MSaas/SFFeedManager.h>
 #import <MSaas/SFFeedAdData.h>
 #import <MSaas/SFBaseManager.h>
-#import <MSaas/SFImgUtil.h>
+#import <MSaas/UIImageView+SFAdd.h>
 #import <MSaas/SFAdSourcesModel.h>
 #import <MSaas/SFLaunchView.h>
 #import <MSaas/SFInterstitialView.h>

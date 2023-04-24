@@ -26,6 +26,6 @@ target 'testPod' do
   # 美数广告主适配包
   pod 'SFAdMsAdapter'
   # Groomer广告主适配包
-  pod 'SFAdGroMoreAdapter'
+  pod 'SFAdGromoreAdapter'
 
 end
