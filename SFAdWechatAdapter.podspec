@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SFWechatMiniAppAdapter"
-  s.version      = "2.6.8" # 版本号
+  s.version      = "2.6.9" # 版本号
   s.summary      = "SFWechatMiniAppAdapter is a AD SDK Adapter."
   s.description  = <<-DESC
                    ‘Mediatom provides Union ADs which include miniAPP etc..’
