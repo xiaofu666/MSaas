@@ -20,8 +20,6 @@ typedef enum : NSUInteger {
 
 @interface SFAdSourcesModel : NSObject
 
-//请求的广告唯一Id
-@property (nonatomic, copy) NSString *ad_id;
 //广告源在平台的id
 @property (nonatomic, assign) NSInteger adv_id;
 //广告源广告位id
@@ -85,7 +83,7 @@ typedef enum : NSUInteger {
 @property (nonatomic, copy) NSString *adapter_class;
 //是否是预加载
 @property (nonatomic, assign) BOOL is_proload;
-//uniqueID
+//请求的广告唯一Id
 @property (nonatomic, copy) NSString *uniqueID;
 //trackID
 @property (nonatomic, copy) NSString *trackID;

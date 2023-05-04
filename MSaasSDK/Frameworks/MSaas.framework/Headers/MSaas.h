@@ -20,6 +20,7 @@ FOUNDATION_EXPORT const unsigned char MSaasVersionString[];
 #import <MSaas/SFSplashManager.h>
 #import <MSaas/SFRewardVideoManager.h>
 #import <MSaas/SFFullscreenVideoManager.h>
+#import <MSaas/SFDrawVideoManager.h>
 #import <MSaas/SFBannerManager.h>
 #import <MSaas/SFInterstitialManager.h>
 #import <MSaas/SFTemplateManager.h>
@@ -33,6 +34,4 @@ FOUNDATION_EXPORT const unsigned char MSaasVersionString[];
 #import <MSaas/SFBannerView.h>
 #import <MSaas/SFSkipAdButton.h>
 #import <MSaas/SFVideoView.h>
-#import <MSaas/SFDrawVideoManager.h>
 #import <MSaas/SFDrawVideoAdView.h>
-#import <MSaas/SFFocusImage.h>

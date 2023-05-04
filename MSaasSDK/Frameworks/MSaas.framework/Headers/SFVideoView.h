@@ -23,14 +23,24 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) id delegate;
 
-@property (nonatomic, strong) AVPlayerLayer *playLayer;
+// 是否自动控制播放
+@property (nonatomic, assign) BOOL isAutoControl;
+
 
 @property (nonatomic, assign) NSTimeInterval currentTime;
-@property (nonatomic, strong) AVPlayerItem *playItem;
 
 - (void)renderWirhVideo:(NSString *)videoUrl Image:(NSString *)imageUrl;
 
 - (void)replay;
+
+- (void)video_play;
+- (void)video_pause;
+
+//声音控制 YES：静音； NO：有声
+- (void)videoMuted:(BOOL)muted;
+
+/// 释放当前的播放器
+-(void)freePlayer;
 
 @end
 

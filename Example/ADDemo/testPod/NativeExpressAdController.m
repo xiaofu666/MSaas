@@ -108,7 +108,11 @@
  */
 - (void)templateAdDidLoadViews:(NSArray<__kindof UIView *> *)views{
     NSLog(@"广告数据：加载成功");
-    [self.dataArray insertObjects:views atIndexes:[NSIndexSet indexSetWithIndex:self.index]];
+    NSMutableArray *tmpArray = [NSMutableArray arrayWithArray:self.dataArray];
+    for (UIView *view in views) {
+        [tmpArray insertObject:view atIndex:self.index];
+    }
+    self.dataArray = tmpArray;
 }
 /**
  * 广告数据：加载失败

@@ -19,13 +19,15 @@ typedef void(^ShowBlock)(void);
 
 @property (nonatomic) CGRect tipFrame;
 @property (nonatomic) CGRect skipFrame;
+@property (nonatomic) CGRect volumeFrame;
 @property (nonatomic, assign) BOOL frameSet;
 
 @property (nonatomic) CGRect adFrame;
-@property (nonatomic, strong) UIImageView *bigImgView;
-@property (nonatomic, strong) UIImageView *backImgView;
 @property (nonatomic, strong) SFFeedAdData *model;
-@property (nonatomic, strong) UIImageView *iconView;
+//底图背景
+@property (nonatomic, strong) UIImageView *backImgView;
+//图片
+@property (nonatomic, strong) UIImageView *bigImgView;
 
 - (void)restrictedClickAreaWithFrame:(CGRect)frame;
 
