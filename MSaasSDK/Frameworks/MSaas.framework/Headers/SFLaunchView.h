@@ -15,8 +15,6 @@ typedef void(^ShowBlock)(void);
 
 @interface SFLaunchView : UIView
 
-@property (nonatomic) UIEdgeInsets sf_safeAreaInsets;
-
 @property (nonatomic) CGRect tipFrame;
 @property (nonatomic) CGRect skipFrame;
 @property (nonatomic) CGRect volumeFrame;

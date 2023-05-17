@@ -26,10 +26,9 @@ NS_ASSUME_NONNULL_BEGIN
 // 是否自动控制播放
 @property (nonatomic, assign) BOOL isAutoControl;
 
-
 @property (nonatomic, assign) NSTimeInterval currentTime;
 
-- (void)renderWirhVideo:(NSString *)videoUrl Image:(NSString *)imageUrl;
+- (void)renderWirhVideo:(NSString *)videoUrl Image:(nullable NSString *)imageUrl;
 
 - (void)replay;
 

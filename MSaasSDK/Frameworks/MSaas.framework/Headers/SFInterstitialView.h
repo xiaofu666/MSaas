@@ -19,8 +19,6 @@ typedef void(^ShowBlock)(void);
 
 @property (nonatomic, strong) UIImageView *imageView;
 
-@property (nonatomic, readonly) UIEdgeInsets sf_safeAreaInsets;
-
 @property (nonatomic, weak, nullable) SFAdSourcesModel *adModel;
 
 @property (nonatomic, assign) double currentTime;
