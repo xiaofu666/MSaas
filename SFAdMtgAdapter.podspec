@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SFAdMtgAdapter"
-  s.version      = "2.6.9" # 版本号
+  s.version      = "2.7.0" # 版本号
   s.summary      = "SFAdMtgAdapter is a AD SDK Adapter."
   s.description  = <<-DESC
                    ‘Mediatom provides Union ADs which include native、banner、feed、splash、RewardVideo etc..’
@@ -24,6 +24,6 @@ Pod::Spec.new do |s|
   s.xcconfig = { "OTHER_LDFLAGS" => "-ObjC" }
   s.pod_target_xcconfig = { 'VALID_ARCHS[sdk=iphonesimulator*]' => '' }
 
-  s.dependency 'MintegralAdSDK/All', '~>7.3.4'
+  s.dependency 'MintegralAdSDK/All', '~>7.3.6'
   
 end
