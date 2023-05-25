@@ -61,7 +61,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)showInterstitialAd;
 
 /// 自定义广告主时，需要进行注册
-/// @param adv_id 广告主在MedPro平台对应的adv_id
+/// @param adv_id 广告主在Mediatom平台对应的adv_id
 /// @param className 自定义Adapter的类名
 - (void)registerADVId:(NSString *)adv_id ClassName:(NSString *)className;
 
