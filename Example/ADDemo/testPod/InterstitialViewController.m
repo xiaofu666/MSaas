@@ -29,12 +29,12 @@
 }
 - (void)interstitialAdBtnClicked:(UIButton*)button
 {
+    NSLog(@"插屏广告请求");
     self.interstitialAd = [SFInterstitialManager new];
     self.interstitialAd.mediaId = interstitial_id;
     self.interstitialAd.showAdController = self.navigationController;
     self.interstitialAd.delegate = self;
     [self.interstitialAd loadAdData];
-    NSLog(@"插屏广告请求");
 }
 /**
  * 广告数据：加载成功

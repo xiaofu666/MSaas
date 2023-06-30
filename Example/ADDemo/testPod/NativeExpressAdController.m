@@ -40,6 +40,7 @@
 }
 
 - (void)loadAD{
+    NSLog(@"广告数据：开始请求");
     SFTemplateManager *manager = [[SFTemplateManager alloc] init];
     manager.mediaId = template_id;
     manager.adCount = 1;

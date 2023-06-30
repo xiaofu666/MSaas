@@ -33,6 +33,8 @@
          @{@"class":@"FeedAdViewController",@"name":@"原生信息流广告"},
          @{@"class":@"NativeExpressAdController",@"name":@"模板广告"},
          @{@"class":@"PasterVideoViewController",@"name":@"视频贴片"},
+         @{@"class":@"DrawVideoViewController",@"name":@"Draw信息流"},
+         @{@"class":@"NativeAdViewController",@"name":@"原生混合"},
          @{@"class":@"IDFAViewController",@"name":@"查看IDFA"}
     ];
     

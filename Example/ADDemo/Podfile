@@ -23,8 +23,6 @@ target 'testPod' do
   pod 'SFAdSigmobAdapter'
   # Mintegral广告主适配包
   pod 'SFAdMtgAdapter'
-  # 美数广告主适配包
-  pod 'SFAdMsAdapter'
   # Gromore广告主适配包
   pod 'SFAdGromoreAdapter'
 

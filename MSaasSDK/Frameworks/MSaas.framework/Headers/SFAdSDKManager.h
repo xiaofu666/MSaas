@@ -47,6 +47,9 @@ NS_ASSUME_NONNULL_BEGIN
 //开启联盟SDK回调日志
 + (void)unionAdCallbackLog:(BOOL)open;
 
+//清除广告素材缓存
++ (void)clearAdMaterialCache;
+
 @end
 
 NS_ASSUME_NONNULL_END

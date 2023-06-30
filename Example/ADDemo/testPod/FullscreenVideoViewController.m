@@ -39,6 +39,7 @@
 
 - (void)loadRewardedVideo
 {
+    NSLog(@"全屏视频广告请求");
     self.motivationVideo = [SFFullscreenVideoManager new];
     self.motivationVideo.mediaId = fullscreen_video_id;
     self.motivationVideo.delegate = self;

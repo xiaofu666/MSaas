@@ -35,11 +35,11 @@
 
 - (void)launchScreenBtnClicked:(UIButton*)sender
 {
+    NSLog(@"开始请求开屏广告");
     _manager = [SFSplashManager new];
     _manager.delegate = self;
     _manager.mediaId = splash_id;
     [_manager loadAdData];
-    NSLog(@"开始请求开屏广告");
 }
 
 #pragma mark ADDelegate

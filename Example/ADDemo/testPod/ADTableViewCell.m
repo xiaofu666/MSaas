@@ -31,6 +31,7 @@
 }
 
 - (void)loadAD{
+    NSLog(@"广告数据：开始请求");
     SFFeedManager *feedManager = [[SFFeedManager alloc] init];
     feedManager.mediaId = feed_id;
     feedManager.adCount = 1;
@@ -45,6 +46,7 @@
  */
 - (void)feedAdDidLoadDatas:(NSArray<__kindof SFFeedAdData *> *)datas{
     NSLog(@"广告数据：加载成功  %zd",datas.count);
+    //请求单个广告示例
     SFFeedAdData *adData = datas.firstObject;
     self.adData = adData;
     self.adContentLabel.text = adData.adContent;

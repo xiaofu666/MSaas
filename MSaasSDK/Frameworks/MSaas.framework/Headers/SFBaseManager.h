@@ -31,7 +31,7 @@ typedef void(^ADSuccess)(SFAdSourcesModel *model);
 /// 加载bidding广告
 - (void)loadBiddingADWithModel:(SFAdSourcesModel *)model;
 
-/// 销毁不用的属性，防止内存泄漏
+/// 销毁属性，防止内存泄漏
 - (void)deallocAllProperty;
 /// 个性化推荐广告设置  1:关闭个性化推荐   0:打开个性化推荐    默认为0
 + (void)setPersonalizedState:(NSNumber *)state;

@@ -35,6 +35,7 @@
 }
 - (void)halfLaunchScreenBtnClicked:(UIButton*)sender
 {
+    NSLog(@"开始请求开屏广告");
     UILabel *bottom = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 125)];
     bottom.text = @"AD Demo";
     bottom.textAlignment = NSTextAlignmentCenter;
@@ -48,7 +49,6 @@
     manager.bottomView = bottom; //bottom 为含logo的view
     [manager loadAdData];
     self.manager = manager;
-    NSLog(@"开始请求开屏广告");
 }
 
 

@@ -45,6 +45,11 @@
 @property (nonatomic) double imageRatio;
 
 /**
+ * 多图广告的Url集合
+ */
+@property (nonatomic, copy, nullable) NSArray *mediaUrlList;
+
+/**
  * 图标Url
  */
 @property (nonatomic, copy, nullable) NSString *iconUrl;
@@ -62,7 +67,7 @@
 /**
  * 广告ID
  */
-@property (nonatomic, assign) NSInteger adID;
+@property (nonatomic, assign) NSUInteger adID;
 
 /**
  * 广告按钮显示文字
@@ -128,5 +133,10 @@
  * 缓存的大图Image，注册之后异步有值
  */
 @property (nonatomic, strong, nullable) UIImage *bgImage;
+
+/**
+ * 在混合信息流中，当为模板广告时，此属性有值
+ */
+@property (nonatomic, weak, nullable) UIView *adView;
 
 @end

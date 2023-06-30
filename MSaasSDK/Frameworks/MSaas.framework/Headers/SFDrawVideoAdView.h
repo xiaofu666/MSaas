@@ -13,9 +13,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SFDrawVideoAdView : UIView
 
-@property (nonatomic, strong) UILabel *adNameLabel;
-
 @property (nonatomic, strong) UIImageView *adImageView;
+
+@property (nonatomic, strong) UIImageView *adLogoView;
+
+@property (nonatomic, strong) UILabel *adNameLabel;
 
 @property (nonatomic, strong) UILabel *adContentLabel;
 
@@ -25,7 +27,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) BOOL isPlay;
 
-@property (nonatomic, strong, nullable) SFFeedAdData *model;
+@property (nonatomic, weak, nullable) SFFeedAdData *model;
+
+- (void)addVolumeBtn;
 
 @end
 

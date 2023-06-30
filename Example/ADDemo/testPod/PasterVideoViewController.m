@@ -68,6 +68,7 @@
 - (void)loadAd{
     [self removeVideoView];
     
+    NSLog(@"贴片广告：开始请求");
     self.feedManager = [[SFFeedManager alloc] init];
     self.feedManager.mediaId = paster_id;
     self.feedManager.adCount = 1;

@@ -9,7 +9,6 @@
 #define ADInfo_h
 
 #import <MSaas/MSaas.h>
-#import "ADTableViewCell.h"
 
 // com.medpro.ios
 #define app_id                  @"294f913371434775"
@@ -21,7 +20,8 @@
 #define template_id             @"65ca80b326e5d9de"
 #define fullscreen_video_id     @"9fd36fa1e33332ee"
 #define paster_id               @"e9e88d5bd40653f4"
-#define draw_video_id           @"463698138f47ba96"
+#define draw_video_id           @"e0d59474a2ca70be"
+#define natives_id              @"5bea84e52ecdc13a"
 
 
 #define SF_ScreenW    [UIScreen mainScreen].bounds.size.width

@@ -32,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 // 广告加载ID
 @property (nonatomic, copy) NSString *requestID;
 
-// 广告类型： 1:开屏；2:插屏；3:信息流；4:模板；5:banner；6:激励视频；7:全屏视频；8:draw视频流；
+// 广告类型： 1:开屏；2:插屏；3:信息流；4:模板；5:banner；6:激励视频；7:全屏视频；8:draw视频流；9:信息流混出（自渲染+模板）；
 @property (nonatomic, assign) NSInteger adType;
 
 @end

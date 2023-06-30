@@ -48,6 +48,18 @@ typedef enum : NSUInteger {
 @property (nonatomic, assign) NSInteger button_size;
 //广告源名称
 @property (nonatomic, copy) NSString *adv_name;
+//是否开启热区 "A"=开启，"S"=关闭
+@property (nonatomic, copy) NSString *hotspot;
+//是否开启红包雨 "A"=开启，"S"=关闭
+@property (nonatomic, copy) NSString *red_package_rain;
+//广告类型
+// 穿山甲：1=信息流，2=draw信息流，3=贴片
+// 优量汇：1=信息流，2=详情页插入，3=视频贴片，4=沉浸式视频流
+// 快手啊：1=信息流，2=draw信息流
+// 百青藤：1=信息流，2=视频贴片，3=竖版视频
+@property (nonatomic, copy) NSString *ad_type;
+//广告样式  1=模板渲染，2=自渲染
+@property (nonatomic, copy) NSString *ad_style;
 
 //1、直客竞价 2、联盟服务端竞价  3、联盟SDK竞价  4、固价瀑布流  5、联盟打底
 @property (nonatomic, assign) SFADType adType;
@@ -71,6 +83,12 @@ typedef enum : NSUInteger {
 @property (nonatomic) BOOL isCache;
 //素材ID
 @property (nonatomic, copy) NSString *cid;
+//素材类型，1=图片，2=视频，3=图文
+@property (nonatomic, assign) NSInteger ctype;
+//标题 长度超过30个字符时截取前30个字符
+@property (nonatomic, copy) NSString *title;
+//描述 长度超过30个字符时截取前30个字符
+@property (nonatomic, copy) NSString *desc;
 //广告加载ID
 @property (nonatomic, copy) NSString *req_id;
 //层次ID
@@ -92,7 +110,7 @@ typedef enum : NSUInteger {
 //1：素材加载成功  2：素材加载失败  3：点击  4：从落地页返回  5：广告关闭 6：素材成功展示 7：激励视频获得奖励回调  8：素材渲染成功   9：视频播放状态改变
 @property (nonatomic, assign) NSInteger type;
 //请求广告的错误信息
-@property (nonatomic, strong) NSError *error;
+@property (nonatomic, copy) NSError *error;
 //自投类点击链接
 @property (nonatomic, copy) NSString *clickUrl;
 //对应的广告主类
