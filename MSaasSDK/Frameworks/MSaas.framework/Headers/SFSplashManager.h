@@ -48,46 +48,40 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface SFSplashManager : SFBaseAdManager
-/**
- * 广告回调的代理
- */
+
+/// 广告回调的代理
 @property(nonatomic, weak) id<SFSplashDelegate> delegate;
-/**
- 1. 全屏接入：bottomView 不传入
- 2. 半屏接入：bottomView 传入logo的view
- */
-/** 设置半屏广告的所含 logo 的 view  */
+
+/// 是否强制竖版开屏，默认为 NO
+@property (nonatomic, assign) BOOL portrait;
+
+/// 1. 全屏接入：bottomView 不传入
+/// 2. 半屏接入：bottomView 传入logo的view
+/// 设置半屏广告的所含 logo 的 view
 @property (nonatomic, strong) UIView * _Nullable bottomView;
 
-/**
- * 设置开屏广告的停留时间default 5s
- */
+/// 设置开屏广告的停留时间default 5s
 @property (nonatomic, assign) NSInteger duration DEPRECATED_MSG_ATTRIBUTE("已弃用，固定5秒");
-/**
- * 设置开屏广告的等待时间 default 5s
- */
+
+/// 设置开屏广告的等待时间 default 5s
 @property (nonatomic, assign) NSInteger waitDataDuration DEPRECATED_MSG_ATTRIBUTE("已弃用，后台配置");
-/**
- * 用来弹出目标页的ViewController，一般为当前ViewController或root控制器
- */
+
+/// 用来弹出目标页的ViewController，一般为当前ViewController或root控制器
 @property (nonatomic, weak) UIViewController *showAdController;
 
-// 发起广告请求并展示在Window中
+/// 发起广告请求并展示在Window中
 - (void)loadAndShowSplashAdWithWindow:(UIWindow *)window;
 
-// 展示开屏广告,在广告成功回调 - (void)splashAdDidLoad; 中调用
+/// 展示开屏广告,在广告成功回调 - (void)splashAdDidLoad; 中调用
 - (void)showSplashAdWithWindow:(UIWindow *)window;
-
 
 /// 自定义广告主时，需要进行注册
 /// @param adv_id 广告主在Mediatom平台对应的adv_id
 /// @param className 自定义Adapter的类名
 - (void)registerADVId:(NSString *)adv_id ClassName:(NSString *)className;
 
-/**
- API广告视频播放静音开关
- @param isMute 是否静音
- */
+/// API广告视频播放静音开关
+/// @param isMute 是否静音
 - (void)videoMute:(BOOL)isMute;
 
 @end
