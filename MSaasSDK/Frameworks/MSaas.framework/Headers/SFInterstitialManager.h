@@ -43,21 +43,17 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface SFInterstitialManager : SFBaseAdManager
-/**
- * 广告回调的代理
- */
+
+/// 广告回调的代理
 @property(nonatomic, weak) id<SFInterstitialDelegate> delegate;
 
-/**
- * 广告大小尺寸
- */
-@property (nonatomic) CGSize size;
+/// 广告大小尺寸
+@property (nonatomic) CGSize size DEPRECATED_MSG_ATTRIBUTE("已弃用，设置无效");
 
+/// 用来弹出目标页的ViewController，一般为当前ViewController或root控制器
 @property (nonatomic, weak) UIViewController *showAdController;
 
-
-
-//展示横幅广告  传入承载广告的
+/// 展示插屏广告
 - (void)showInterstitialAd;
 
 /// 自定义广告主时，需要进行注册

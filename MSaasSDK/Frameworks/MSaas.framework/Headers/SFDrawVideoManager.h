@@ -39,22 +39,17 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface SFDrawVideoManager : SFBaseAdManager
-/**
- * 广告回调的代理
- */
+
+/// 广告回调的代理
 @property(nonatomic, weak) id<SFDrawVideoDelegate> delegate;
 
-/**
- * 广告view大小尺寸，默认屏幕宽高
- */
+/// 广告view大小尺寸，默认屏幕宽高
 @property (nonatomic) CGSize size;
-/**
- * 广告数量,不传则后台控制
- */
+
+/// 广告数量,不传则后台控制
 @property (nonatomic) NSInteger adCount;
-/**
- * 开发者需传入用来弹出目标页的ViewController，一般为当前ViewController
- */
+
+/// 开发者需传入用来弹出目标页的ViewController，一般为当前ViewController
 @property (nonatomic, weak) UIViewController *showAdController;
 
 
