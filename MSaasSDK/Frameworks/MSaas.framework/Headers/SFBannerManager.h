@@ -65,7 +65,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-//展示横幅广告  传入承载广告的
+/// 展示横幅广告
+/// @param view 承载广告的 view
 - (void)showBannerAdWithView:(UIView *)view;
 
 

@@ -39,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)nativeAdVideoPlayerStatusChanged:(SFMediaPlayerStatus)status;
 
-//当为模板广告时有以下回调
+/// !!!: 当为模板广告时有以下回调
 /**
  * 广告视图：渲染成功
  */
@@ -51,8 +51,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-// ***** SFNativeManager 为 SFFeedManager 和 SFTemplateManager 和 SFDrawVideoManager 的聚合使用 *****
+/// !!!: SFNativeManager 为 SFFeedManager 和 SFTemplateManager 和 SFDrawVideoManager 的聚合使用
+///
+/// 原生混合接入类
 @interface SFNativeManager : SFBaseAdManager
+
 /**
  * 广告回调的代理
  */
@@ -68,13 +71,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic) NSInteger adCount;
 
+/// !!!:  必须在确保视图成功显示在屏幕上之后再调用注册点击，确保广告进行有效曝光
 /**
  绑定展示的图片视图和点击视图，行为由SDK控制
  @param view 展示的图片视图
  @param adData 广告数据
  @param views 可点击的视图
  */
-// !!!:  必须在确保视图成功显示在屏幕上之后再调用注册点击，确保广告进行有效曝光
 - (void)registerAdViewForBindImage:(UIImageView *)view adData:(SFFeedAdData *)adData clickableViews:(NSArray *)views;
 
 - (void)deallocAllFeedProperty;

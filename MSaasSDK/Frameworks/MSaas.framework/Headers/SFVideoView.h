@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) id delegate;
 
-// 是否自动控制播放
+/// 是否自动控制播放
 @property (nonatomic, assign) BOOL isAutoControl;
 
 @property (nonatomic, assign) NSTimeInterval currentTime;
@@ -35,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)video_play;
 - (void)video_pause;
 
-//声音控制 YES：静音； NO：有声
+/// 声音控制 YES：静音； NO：有声
 - (void)videoMuted:(BOOL)muted;
 
 /// 释放当前的播放器

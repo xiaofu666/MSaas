@@ -10,11 +10,16 @@
 #import <UIKit/UIKit.h>
 
 //视频声音控制宏
-#define MSaasGdtMuteEnable @"MSaasGdtMuteEnable"
+#define MSaasVideoMuteEnable      @"MSaasVideoMuteEnable"
 //视频播放控制宏
-#define MSaasGdtPlayEnable @"MSaasGdtPlayEnable"
+#define MSaasVideoPlayEnable      @"MSaasVideoPlayEnable"
+/// 获取 BOOL 值的Key
+#define MSaasVideoEnableSwitchKey @"MSaasVideoEnableSwitchKey"
 
-#define MSaasGdtEnableSwitchKey @"MSaasGdtEnableSwitchKey"
+/// !!!: 下面宏已弃用，建议使用以上宏替代
+#define MSaasGdtMuteEnable        @"MSaasVideoMuteEnable"
+#define MSaasGdtPlayEnable        @"MSaasVideoPlayEnable"
+#define MSaasGdtEnableSwitchKey   @"MSaasVideoEnableSwitchKey"
 
 @interface SFFeedAdData : NSObject
 

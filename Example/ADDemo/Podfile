@@ -11,6 +11,8 @@ target 'testPod' do
   # 以下按需导入
   # 穿山甲广告主适配包
   pod 'SFAdPangolinAdapter'
+  # Gromore广告主适配包
+  pod 'SFAdGromoreAdapter'
   # 广点通广告主适配包
   pod 'SFAdGdtAdapter'
   # 快手广告主适配包
@@ -23,7 +25,5 @@ target 'testPod' do
   pod 'SFAdSigmobAdapter'
   # Mintegral广告主适配包
   pod 'SFAdMtgAdapter'
-  # Gromore广告主适配包
-  pod 'SFAdGromoreAdapter'
 
 end

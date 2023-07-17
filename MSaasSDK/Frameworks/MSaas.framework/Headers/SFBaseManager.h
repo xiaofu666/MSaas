@@ -18,12 +18,13 @@ typedef void(^ADSuccess)(SFAdSourcesModel *model);
 @property (nonatomic, copy, nullable) ADSuccess successBlock;
 @property (nonatomic, strong) SFAdSourcesModel * _Nullable baseModel;
 
-/// 半开屏时传入的 view
+/// 半开屏时传入的 logo view
 @property (nonatomic, strong, nullable) UIView *bottomView;
 /// 开发者传入用来弹出目标页的ViewController
 @property (nonatomic, weak) UIViewController *showAdController;
 
-/// 以下三个方法必须子类实现
+/// MARK: 以下三个方法必须子类实现
+
 /// 加载广告
 - (void)loadADWithModel:(SFAdSourcesModel *)model;
 /// 联盟竞价获取参数
@@ -59,53 +60,56 @@ typedef void(^ADSuccess)(SFAdSourcesModel *model);
 
 @interface SFBaseManager (SFSplashAdd)
 
-//开屏参数
+/// 开屏尺寸
 @property (nonatomic) CGRect frame;
+/// 跳过时间
 @property (nonatomic) NSInteger duration;
+/// 等待时间
 @property (nonatomic) NSInteger waitDataDuration;
+/// 是否
 @property (nonatomic) NSInteger hotspot_type;
-
+/// MARK: 展示开屏广告
 - (void)showSplashAdInWindow:(UIWindow *)window withBottomView:(UIView *)bottomView;
 
 @end
 
 @interface SFBaseManager (SFRewardVideoAdd)
 
-//激励视频
+/// MARK: 展示激励视频
 - (void)showRewardVideoAD;
 
 @end
 
 @interface SFBaseManager (SFBannerAdd)
 
-//横幅广告
+/// 广告尺寸
 @property (nonatomic) CGSize size;
-//是否轮播
+/// 是否轮播
 @property (nonatomic, assign) BOOL loop;
-//轮播间隔
+/// 轮播间隔
 @property (nonatomic, assign) int interval;
-
+/// MARK: 展示横幅广告
 - (void)showBannerAdWithView:(UIView *)view;
 
 @end
 
 @interface SFBaseManager (SFInterstitialAdd)
 
-//插屏广告
+/// MARK: 展示插屏广告
 - (void)showInterstitialAd;
 
 @end
 
 @interface SFBaseManager (SFFeedAdd)
 
-//原生广告,模板广告的请求个数
+/// 原生广告,模板广告的请求个数
 @property (nonatomic) NSInteger adCount;
 
-//原生广告绑定视图和注册
+/// 原生广告绑定视图和注册
 - (void)registerAdViewForBindImage:(UIImageView *)view adData:(SFFeedAdData *)adData clickableViews:(NSArray *)views;
-//模板广告渲染视图
+/// 模板广告渲染视图
 - (void)renderViewWithViewArray:(NSArray *)viewArray;
-//更换 showAdController
+/// 更换 showAdController
 - (void)changeAdViewController:(UIViewController *)adViewController Data:(SFFeedAdData *)adData;
 
 @end
@@ -114,7 +118,7 @@ typedef void(^ADSuccess)(SFAdSourcesModel *model);
 
 @interface SFBaseManager (SFFullscreenVideoAdd)
 
-//展示全屏视频广告
+/// MARK: 展示全屏视频广告
 - (void)showFullscreenVideoAD;
 
 @end

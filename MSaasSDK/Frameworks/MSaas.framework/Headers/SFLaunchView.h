@@ -22,9 +22,9 @@ typedef void(^ShowBlock)(void);
 
 @property (nonatomic) CGRect adFrame;
 @property (nonatomic, strong) SFFeedAdData *model;
-//底图背景
+/// 底图背景
 @property (nonatomic, strong) UIImageView *backImgView;
-//图片
+/// 图片
 @property (nonatomic, strong) UIImageView *bigImgView;
 
 - (void)restrictedClickAreaWithFrame:(CGRect)frame;

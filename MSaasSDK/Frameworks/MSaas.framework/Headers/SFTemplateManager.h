@@ -12,9 +12,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef enum {
-    SFTemplateExpressNativeNormalTheme = 0, // 默认 普通主题 （一般为背景色透明，按照联盟后台配置）
-    SFTemplateExpressNativeDarkTheme = 1,  // 黑模式
-    SFTemplateExpressNativeLightTheme = 2  // 白模式
+    SFTemplateExpressNativeNormalTheme = 0,     // 默认 普通主题 （一般为背景色透明，按照联盟后台配置）
+    SFTemplateExpressNativeDarkTheme = 1,       // 黑模式
+    SFTemplateExpressNativeLightTheme = 2       // 白模式
 } SFTemplateExpressNativeTheme;
 
 @protocol SFTemplateDelegate <NSObject>
@@ -50,6 +50,7 @@ typedef enum {
 @end
 
 @interface SFTemplateManager : SFBaseAdManager
+
 /**
  * 广告回调的代理
  */
@@ -59,19 +60,21 @@ typedef enum {
  * 广告view大小尺寸,高度为0时，将自适应高度（推荐高度传0进行自适应高度）
  */
 @property (nonatomic) CGSize size;
+
 /**
  * 广告数量,不传则后台控制
  */
 @property (nonatomic) NSInteger adCount;
+
 /**
  * 开发者需传入用来弹出目标页的ViewController，一般为当前ViewController
  */
 @property (nonatomic, weak) UIViewController *showAdController;
+
 /**
  * 针对部分联盟广告主有效
  */
 @property (nonatomic, assign) SFTemplateExpressNativeTheme theme;
-
 
 
 /// 自定义广告主时，需要进行注册

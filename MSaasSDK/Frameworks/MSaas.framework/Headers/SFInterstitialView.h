@@ -23,8 +23,6 @@ typedef void(^ShowBlock)(void);
 
 @property (nonatomic, assign) double currentTime;
 
-//@property (nonatomic, strong) UIImage *logoImg;
-
 @property (nonatomic, strong) UIImageView *backImageView;
 
 @property (nonatomic, strong, nullable) SFFeedAdData *model;

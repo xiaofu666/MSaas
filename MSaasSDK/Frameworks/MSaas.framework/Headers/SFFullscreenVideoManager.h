@@ -63,7 +63,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)loadAdDataWithExtra:(NSDictionary * _Nullable)extra;
 
-//展示全屏视频广告
+/// 展示全屏视频广告
 - (void)showFullscreenVideoAdWithController:(UIViewController *)showAdController;
 
 
