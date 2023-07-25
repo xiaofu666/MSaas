@@ -6,6 +6,7 @@
 //
 
 #import <MSaas/MSaas.h>
+#import <MSaas/SFTemplateManager.h>
 
 NS_ASSUME_NONNULL_BEGIN
 @protocol SFNativeDelegate <NSObject>

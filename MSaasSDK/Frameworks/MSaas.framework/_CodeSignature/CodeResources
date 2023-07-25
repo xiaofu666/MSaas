@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/MSaas.h</key>
 		<data>
-		T7IefjI46SYnM/HQwkXP+koN+Fs=
+		rij7D2yhqXuAK/2fqPBrQbkI79g=
 		</data>
 		<key>Headers/SFAdSDKManager.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/SFAdSourcesModel.h</key>
 		<data>
-		4ViP5eUcascKSw9/eFDzZZEwXZM=
+		Plx0IBtaHFg/42mK+0f0yDcPgt8=
 		</data>
 		<key>Headers/SFAnimationGiftView.h</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Headers/SFNativeManager.h</key>
 		<data>
-		JcifqPJQfv4AiLtrIQHE1EJH09c=
+		JKAxyT6a91TSAffMkIVK6vBBrqo=
 		</data>
 		<key>Headers/SFRewardVideoManager.h</key>
 		<data>
@@ -87,6 +87,10 @@
 		<key>Headers/SFSplashManager.h</key>
 		<data>
 		XbyFimNMYg7v0ZjIb1T+pr6H6Lw=
+		</data>
+		<key>Headers/SFTemplateAdView.h</key>
+		<data>
+		ltwNcQv+TjvtxDbqAxwjOSnQF88=
 		</data>
 		<key>Headers/SFTemplateManager.h</key>
 		<data>
@@ -115,11 +119,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			T7IefjI46SYnM/HQwkXP+koN+Fs=
+			rij7D2yhqXuAK/2fqPBrQbkI79g=
 			</data>
 			<key>hash2</key>
 			<data>
-			ywUzDxuzuxbX1s1XyER9EECHpLCGwZraxZSZSNHNCW8=
+			+DlDTQa9URW/tehVrbzHj8urGL0ZZCB0BKyukZN1HnQ=
 			</data>
 		</dict>
 		<key>Headers/SFAdSDKManager.h</key>
@@ -137,11 +141,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4ViP5eUcascKSw9/eFDzZZEwXZM=
+			Plx0IBtaHFg/42mK+0f0yDcPgt8=
 			</data>
 			<key>hash2</key>
 			<data>
-			HjCoLt8oHSfMAxhiBrxAolnDGnmQ/o4zhzhJraltVas=
+			OoytbWQRtFA/6/4yy8weTgGULAg3r8RJtNnlFFOBfxw=
 			</data>
 		</dict>
 		<key>Headers/SFAnimationGiftView.h</key>
@@ -291,11 +295,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			JcifqPJQfv4AiLtrIQHE1EJH09c=
+			JKAxyT6a91TSAffMkIVK6vBBrqo=
 			</data>
 			<key>hash2</key>
 			<data>
-			DE/ODM2OPOooLDYFOQcqgw9qeMQgiZ4BWxEbpes/odQ=
+			NiagMCnxMvqNddwoDAGUmP08qOAK32B0yU2VHZLgPLw=
 			</data>
 		</dict>
 		<key>Headers/SFRewardVideoManager.h</key>
@@ -340,6 +344,17 @@
 			<key>hash2</key>
 			<data>
 			9+slTZv9T2olcnrRpD+be5obKQaTIHLx2PQzRd7W8so=
+			</data>
+		</dict>
+		<key>Headers/SFTemplateAdView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ltwNcQv+TjvtxDbqAxwjOSnQF88=
+			</data>
+			<key>hash2</key>
+			<data>
+			Jx5dmvmIAUbTyXyZyTEnAtC2KJc6mly/QPSvdba3Kak=
 			</data>
 		</dict>
 		<key>Headers/SFTemplateManager.h</key>

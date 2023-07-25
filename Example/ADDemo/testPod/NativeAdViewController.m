@@ -8,6 +8,7 @@
 //
 
 #import "NativeAdViewController.h"
+#import "ADInfo.h"
 #import "NativeAdTableViewCell.h"
 
 @interface NativeAdViewController ()<UITableViewDelegate,UITableViewDataSource,SFNativeDelegate>
@@ -75,16 +76,14 @@
 }
 
 - (void)insertAdView:(NSInteger)index{
+    [self.view endEditing:YES];
     [self.dataArray insertObject:[self adTableViewCell] atIndex:index];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    id model = self.dataArray[indexPath.row];
-    if (![model isKindOfClass:[NativeAdTableViewCell class]]) {
-        NSLog(@"tableView cell 被点击");
-        [self insertAdView:indexPath.row];
-    }
+    NSLog(@"tableView cell 被点击");
+    [self insertAdView:indexPath.row];
 }
 
 //当为模板广告时有以下回调
@@ -119,11 +118,18 @@
                 break;
         }
     };
+    cell.placeId = natives_id;
     [cell loadAD];
     return cell;
 }
 - (void)dealloc{
     NSLog(@"%s",__func__);
+    for (id objc in self.dataArray) {
+        if ([objc isKindOfClass:[NativeAdTableViewCell class]]) {
+            NativeAdTableViewCell *cell = (NativeAdTableViewCell *)objc;
+            [cell deallocAllFeedProperty];
+        }
+    }
 }
 
 @end

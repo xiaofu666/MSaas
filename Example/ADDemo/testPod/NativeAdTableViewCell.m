@@ -13,6 +13,7 @@
 
 @property (nonatomic, strong) SFNativeManager *nativeManager;
 @property (nonatomic, strong) SFFeedAdData *adData;
+@property (nonatomic, strong) SFTemplateAdView *adView;
 
 @end
 
@@ -22,16 +23,15 @@
     [super awakeFromNib];
     // Initialization code
     
-    self.infoBtn.layer.masksToBounds = YES;
-    self.infoBtn.layer.borderColor =  [UIColor colorWithRed:208/255.0 green:0 blue:0 alpha:1].CGColor;
-    self.infoBtn.layer.borderWidth = 1;
-    self.infoBtn.layer.cornerRadius = 4;
+    self.closeBtn.layer.masksToBounds = YES;
+    self.closeBtn.layer.borderColor = [UIColor colorWithRed:208/255.0 green:208/255.0 blue:208/255.0 alpha:1].CGColor;
+    self.closeBtn.layer.borderWidth = 1;
+    self.closeBtn.layer.cornerRadius = 10;
 }
 
 - (void)loadAD{
-    NSLog(@"广告数据：开始请求");
     SFNativeManager *manager = [[SFNativeManager alloc] init];
-    manager.mediaId = natives_id;
+    manager.mediaId = self.placeId;
     manager.adCount = 1;
     manager.size = CGSizeMake(SF_ScreenW, 0);
     manager.showAdController = self.showAdController;
@@ -46,23 +46,20 @@
  */
 - (void)nativeAdDidLoadDatas:(NSArray<__kindof SFFeedAdData *> *)datas{
     NSLog(@"广告数据：加载成功  %zd",datas.count);
-    //请求单个广告示例
     SFFeedAdData *adData = datas.firstObject;
+    //请求单个广告示例
     self.adData = adData;
     if (adData.adView) {
+        /// 模版广告直接添加
         [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
         [self addSubview:adData.adView];
     } else {
-        self.adContentLabel.text = adData.adContent;
-        self.adTitleLabel.text = adData.adTitle;
-        CGFloat iconH = 17;
-        CGFloat iconW = adData.adLogo.size.width * iconH / adData.adLogo.size.height;
-        self.adLogoW.constant = iconW;
-        self.adIconImageView.image = adData.adLogo;
-        [self.infoBtn setTitle:adData.buttonText?:@"查看详情" forState:UIControlStateNormal];
-        self.infoBtn.userInteractionEnabled = NO;
-    //        adData.isCustomRender = YES;
         adData.isRenderImage = YES;
+        /// 使用 SDK 自带模版渲染广告示例
+        SFTemplateAdView *adView = [[SFTemplateAdView alloc] initWithFrame:CGRectMake(0, 0, self.adBackView.frame.size.width, 0) Model:adData Style:SFTemplateStyleLIRT LRMargin:0 TBMargin:0];
+        [self.adBackView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+        [self.adBackView addSubview:adView];
+        self.adView = adView;
     }
     NSLog(@"getCurrentBaseEcpmInfo = %@",[self.nativeManager getCurrentBaseEcpmInfo]);
     if (self.successBlock) {
@@ -71,20 +68,18 @@
 }
 - (void)registerAdView{
     if (self.adData.adView) {
-        
+        //模板 SDK 处理
     } else {
-        self.nativeManager.showAdController = self.showAdController;
-        [self.nativeManager registerAdViewForBindImage:self.adImageView adData:self.adData clickableViews:@[self]];
+        [self.nativeManager registerAdViewForBindImage:self.adView.adImageView adData:self.adData clickableViews:@[self.adBackView]];
     }
 }
 - (CGFloat)cellHeight{
     if (self.adData.adView) {
         CGFloat cellHeight = self.adData.adView.bounds.size.height;
-        NSLog(@"AdViewHeight = %f",cellHeight);
         return cellHeight;
     } else {
-        CGFloat cellHeight = 90 + (UIScreen.mainScreen.bounds.size.width - 30) * 9 / 16;
-        NSLog(@"cellHeight = %f",cellHeight);
+        /// 使用 SDK 模版渲染示例 (广告高度+cell 上下间距)
+        CGFloat cellHeight = self.adView.bounds.size.height + 20;
         return cellHeight;
     }
 }
@@ -134,10 +129,17 @@
  */
 - (void)nativeAdDidCloseWithADView:(UIView *)nativeAdView{
     NSLog(@"广告视图：关闭");
+    [self closeBtnClick];
+}
+- (IBAction)closeBtnClick {
     if (self.successBlock) {
         self.successBlock(3);
     }
 }
-
+- (void)deallocAllFeedProperty{
+    NSLog(@"%s",__func__);
+    //释放绑定的资源对象
+    [self.nativeManager deallocAllFeedProperty];
+}
 
 @end

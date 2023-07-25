@@ -13,13 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NativeAdTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *adIconImageView;
-@property (weak, nonatomic) IBOutlet UILabel *adTitleLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *adImageView;
-@property (weak, nonatomic) IBOutlet UILabel *adContentLabel;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *adLogoW;
-
-@property (weak, nonatomic) IBOutlet UIButton *infoBtn;
+@property (weak, nonatomic) IBOutlet UIButton *closeBtn;
+@property (weak, nonatomic) IBOutlet UIView *adBackView;
 
 @property (nonatomic) CGFloat cellHeight;
 
@@ -28,9 +23,13 @@ NS_ASSUME_NONNULL_BEGIN
 // type: 1: 加载成功   2：渲染成功   3：模板广告关闭
 @property (nonatomic, copy) void(^successBlock)(NSInteger type);
 
+@property (nonatomic, copy) NSString *placeId;
+
 - (void)loadAD;
 
 - (void)registerAdView;
+
+- (void)deallocAllFeedProperty;
 
 @end
 
