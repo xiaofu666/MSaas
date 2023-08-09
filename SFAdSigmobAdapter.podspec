@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SFAdSigmobAdapter"
-  s.version      = "2.7.1.4" # 版本号
+  s.version      = "2.7.1.6" # 版本号
   s.summary      = "SFAdSigmobAdapter is a AD SDK Adapter."
   s.description  = <<-DESC
                    ‘Mediatom provides Union ADs which include native、banner、feed、RewardVideo etc..’

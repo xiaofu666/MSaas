@@ -64,6 +64,8 @@ typedef enum : NSUInteger {
 @property (nonatomic, copy) NSString *draw_type;
 /// 按钮位置 0=浮图右上、1=图下居中、2=图右上角
 @property (nonatomic, copy) NSString *button_position;
+/// 投标id
+@property (nonatomic, copy) NSString *bidPayload;
 
 /// MARK: 广告资源信息
 /// 1、直客竞价 2、联盟服务端竞价  3、联盟SDK竞价  4、固价瀑布流  5、联盟打底

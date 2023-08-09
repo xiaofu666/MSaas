@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SFAdJztAdapter"
-  s.version      = "2.7.1.5" # 版本号
+  s.version      = "2.7.1.6" # 版本号
   s.summary      = "SFAdJztAdapter is a AD SDK Adapter."
   s.description  = <<-DESC
                    ‘Mediatom provides Union ADs which include native、banner、feed、splash、RewardVideo etc..’
@@ -15,6 +15,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "9.0"
   s.ios.deployment_target = '9.0'
+  s.swift_versions = '4.0'
 
   s.frameworks = 'AssetsLibrary', 'MapKit', 'JavaScriptCore', 'StoreKit', 'MobileCoreServices', 'WebKit', 'MediaPlayer', 'CoreMedia', 'AVFoundation', 'CoreLocation', 'CoreTelephony', 'SystemConfiguration', 'AdSupport', 'CoreMotion', 'Security', 'QuartzCore', 'CoreGraphics', 'SafariServices', 'UIKit', 'Foundation', 'AppTrackingTransparency'
   s.libraries = 'c++', 'c++abi', 'resolv', 'xml2', 'bz2', 'z', 'iconv', 'sqlite3'

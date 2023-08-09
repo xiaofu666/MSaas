@@ -10,11 +10,11 @@
 		</data>
 		<key>Headers/SFAdSDKManager.h</key>
 		<data>
-		DJ+2jFhZxK4gNinMuwEJ2coVCV0=
+		RuiDjM7Xom7CGtiH+Ng90pyUM/0=
 		</data>
 		<key>Headers/SFAdSourcesModel.h</key>
 		<data>
-		Plx0IBtaHFg/42mK+0f0yDcPgt8=
+		83tqwWi0laX0gDOXtSyHG53zHTw=
 		</data>
 		<key>Headers/SFAnimationGiftView.h</key>
 		<data>
@@ -106,7 +106,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		F5tFnXPkk07ln0OuZdd/qsATYnU=
+		ok5hCHZmV4r46JzBPA7oDICLHOY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -130,22 +130,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			DJ+2jFhZxK4gNinMuwEJ2coVCV0=
+			RuiDjM7Xom7CGtiH+Ng90pyUM/0=
 			</data>
 			<key>hash2</key>
 			<data>
-			NKF1NSoE1uJKUHUt4dzIYvAGZJx4dzPyRvQHJ/6ac9I=
+			s0lEm5p7KNM/zUmcP9stunoVr/z8rdqv9ASzxobwg6A=
 			</data>
 		</dict>
 		<key>Headers/SFAdSourcesModel.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Plx0IBtaHFg/42mK+0f0yDcPgt8=
+			83tqwWi0laX0gDOXtSyHG53zHTw=
 			</data>
 			<key>hash2</key>
 			<data>
-			OoytbWQRtFA/6/4yy8weTgGULAg3r8RJtNnlFFOBfxw=
+			IRXHFaqvSBRgsNxaq2Bbos56+5c9D+/ptO3tWApp/uc=
 			</data>
 		</dict>
 		<key>Headers/SFAnimationGiftView.h</key>
