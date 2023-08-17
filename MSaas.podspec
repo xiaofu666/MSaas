@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "MSaas"
-  s.version      = "2.7.1.7" # 版本号
+  s.version      = "2.7.1.8" # 版本号
   s.summary      = "MSaas is a SDK from Mediatom providing union AD service."
   s.description  = <<-DESC
                    ‘Mediatom provides Union ADs which include native、banner、feed、splash、RewardVideo etc..’
