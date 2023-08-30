@@ -8,6 +8,11 @@
 #import <Foundation/Foundation.h>
 #import <StoreKit/StoreKit.h>
 
+#define M_Log(frmt, ...)                                                           \
+if ([[NSUserDefaults standardUserDefaults] boolForKey:@"SF_DEBUG_UNION"]) {         \
+    NSLog(@"【MediatomiOS】%@", [NSString stringWithFormat:frmt,##__VA_ARGS__]);     \
+}
+
 @class SFFeedAdData,SFAdSourcesModel,SFConfigModelAdplace,SFLaunchView,SFFullscreenVideoAdd,SFSkipAdButton,SFInterstitialView,SFBannerView;
 NS_ASSUME_NONNULL_BEGIN
 
